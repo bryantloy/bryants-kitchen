@@ -942,19 +942,19 @@ const SEED = [{
 }, {
   id: "sunday-gravy-meatballs",
   title: "Sunday Gravy & Two-Meat Meatballs",
-  subtitle: "All-afternoon sauce, baseball-size meatballs",
+  subtitle: "San Marzano gravy, sausage-and-beef meatballs, fresh basil",
   protein: "Beef & Pork",
   audience: "Kids too",
   meal: "Dinner",
   surfaces: ["Stovetop", "Cast iron", "Oven"],
   base_servings: 10,
-  active_min: 55,
+  active_min: 60,
   total_min: 240,
   macros: {
-    cal: 690,
-    p: 33,
-    c: 32,
-    f: 44,
+    cal: 700,
+    p: 34,
+    c: 30,
+    f: 46,
     fi: 5
   },
   temps: [{
@@ -993,7 +993,7 @@ const SEED = [{
     unit: "cup"
   }, {
     id: "g6",
-    name: "28 oz cans crushed tomatoes",
+    name: "28 oz cans San Marzano whole peeled tomatoes",
     amount: 3
   }, {
     id: "g7",
@@ -1002,9 +1002,9 @@ const SEED = [{
     unit: "cup"
   }, {
     id: "g8",
-    name: "basil paste",
-    amount: 6,
-    unit: "tbsp"
+    name: "fresh basil",
+    amount: 2,
+    unit: "cup"
   }, {
     id: "g9",
     name: "dried oregano",
@@ -1018,7 +1018,7 @@ const SEED = [{
   }, {
     id: "g11",
     name: "sugar",
-    amount: 1.5,
+    amount: 1,
     unit: "tsp"
   }, {
     id: "g12",
@@ -1046,7 +1046,7 @@ const SEED = [{
     unit: "lb"
   }, {
     id: "m2",
-    name: "ground pork",
+    name: "ground Italian sausage",
     amount: 1.3,
     unit: "lb"
   }, {
@@ -1075,13 +1075,23 @@ const SEED = [{
     unit: "tsp"
   }, {
     id: "m8",
-    name: "basil paste, for meatballs",
-    amount: 3,
-    unit: "tbsp"
+    name: "fresh basil, for meatballs",
+    amount: 0.5,
+    unit: "cup"
   }, {
     id: "m9",
     name: "Italian seasoning",
-    amount: 2.5,
+    amount: 1,
+    unit: "tsp"
+  }, {
+    id: "m10",
+    name: "kosher salt, for meatballs",
+    amount: 0.75,
+    unit: "tsp"
+  }, {
+    id: "m11",
+    name: "black pepper, for meatballs",
+    amount: 0.75,
     unit: "tsp"
   }, {
     id: "m13",
@@ -1116,60 +1126,74 @@ const SEED = [{
     content: "Pour in {g5} and scrape every bit of fond off the bottom. Simmer about 4 minutes until mostly reduced."
   }, {
     id: "s5",
-    title: "Build the sauce",
-    content: "Add {g6}, {g7} chopped, {g9}, {g11}, {g12}, {g13}, and {g15}. Stir, bring to a gentle bubble, drop to low."
+    title: "Crush the San Marzanos by hand",
+    timer_seconds: 300,
+    content: "Open {g6} and crush the tomatoes with your hands straight into the pot, squeezing each one until it bursts. Never a blender — blending whips air in and turns the sauce orange, pale, and faintly bitter. Hand-crushed leaves the texture you want."
   }, {
     id: "s6",
+    title: "Build the sauce",
+    content: "Add {g7} chopped, {g9}, {g11}, {g12}, {g13}, and {g15}. Note the sugar is down to a teaspoon: San Marzanos are sweeter and lower in acid than standard crushed tomatoes, so the usual correction isn't needed. Taste before adding more."
+  }, {
+    id: "s7",
+    title: "Basil stems in, leaves out",
+    content: "Strip the leaves from {g8} and set them aside in the fridge. Tie the bare stems with twine and drop them into the pot — the stems carry plenty of aroma and hold up to a long simmer, while leaves added now would turn black and bitter."
+  }, {
+    id: "s8",
     title: "First hour, uncovered",
     timer_seconds: 3600,
     content: "Simmer uncovered on low one hour, stirring every 20–30 minutes. Start the meatballs while this runs."
   }, {
-    id: "s7",
+    id: "s9",
     title: "Make the panade",
     timer_seconds: 300,
     content: "Combine {m4} and {m5} in a large bowl. Five minutes until it forms a paste. This is the single thing keeping the meatballs juicy — don't shortcut it."
   }, {
-    id: "s8",
-    title: "Season the mix",
-    content: "Into the panade add {m3}, {m6} grated, {m7}, {m8}, {m9}, and salt and pepper. Stir until even, before any meat goes in."
+    id: "s10",
+    title: "Season the mix — lightly",
+    content: "Into the panade add {m3}, {m6} grated, {m7}, {m8} chopped, {m9}, {m10}, and {m11}. Salt and seasoning are both cut roughly in half from a plain-pork version, because the Italian sausage arrives already salted and seasoned with fennel. Season as if the sausage weren't there and the meatballs come out inedibly salty."
   }, {
-    id: "s9",
+    id: "s11",
     title: "Fold in the meat",
     content: "Add {m1} and {m2}. Mix with your hands until just combined, then stop. Overworked meat turns rubbery — undermixed is the safer error."
   }, {
-    id: "s10",
+    id: "s12",
+    title: "Fry a test piece",
+    timer_seconds: 180,
+    content: "Flatten a teaspoon of the mix and fry it in a small pan for 2 minutes. Taste it. This is the only chance to correct seasoning, and with sausage in the mix the salt level is genuinely hard to predict — adjust the raw mix now if it needs it."
+  }, {
+    id: "s13",
     title: "Roll them big",
     content: "Roll into baseball-size portions, about 3 inches. Makes roughly 8. Wet hands keep the mix from sticking."
   }, {
-    id: "s11",
+    id: "s14",
     title: "Brown on all sides",
     timer_seconds: 600,
-    content: "Heat {m13} in cast iron over medium-high. Brown in batches, quarter turns, 2–3 minutes a side until crusted all around. Crowding the pan steams them."
+    content: "Heat {m13} in cast iron over medium-high. Brown in batches, quarter turns, 2–3 minutes a side until crusted all around. Sausage renders more fat than plain pork, so pour some off between batches if the pan floods."
   }, {
-    id: "s12",
+    id: "s15",
     title: "Finish in the oven",
     timer_seconds: 900,
     content: "375°F, 15 minutes, to cook through. Skillet straight in, or move to a sheet pan."
   }, {
-    id: "s13",
+    id: "s16",
     title: "Crack the lid and keep going",
     timer_seconds: 5400,
     content: "Back to the gravy. Lid ajar, another 60–90 minutes, stirring occasionally. If it tightens too far, loosen with water or wine."
   }, {
-    id: "s14",
+    id: "s17",
     title: "Finish the gravy",
-    content: "Fish out {g15}. Stir in {g14} and {g8} off the boil. Taste and adjust — it almost always wants more salt than you expect."
+    content: "Fish out {g15} and the basil stems. Stir in {g14} off the boil, then tear in half the reserved leaves from {g8}. Taste and adjust — it almost always wants more salt than you expect."
   }, {
-    id: "s15",
+    id: "s18",
     title: "Marry them",
     timer_seconds: 1800,
     content: "Drop the meatballs into the gravy, simmer together 20–30 minutes. Some will partly dissolve into the sauce, which is the point."
   }, {
-    id: "s16",
+    id: "s19",
     title: "Plate",
-    content: "Cook {m14} one minute under the box time. Save a mug of pasta water before draining and use it to loosen the sauce on the plate. Fresh Parm over the top."
+    content: "Cook {m14} one minute under the box time. Save a mug of pasta water before draining and use it to loosen the sauce on the plate. Tear the rest of the {g8} leaves over each bowl at the table — that last handful off the heat is where the fresh basil aroma actually lands. Fresh Parm over the top."
   }],
-  notes_seed: "Freeze leftovers flat in zip bags, three months. Thaw overnight, reheat low with a splash of water or wine. Macros exclude pasta — add ~200 cal and 10g protein per serving of Protein+."
+  notes_seed: "Freeze leftovers flat in zip bags, three months. Thaw overnight, reheat low with a splash of water or wine. Macros exclude pasta — add ~200 cal and 10g protein per serving of Protein+. If your sausage is hot Italian, drop the red pepper flakes in the gravy."
 }, {
   id: "gochujang-ramen",
   title: "Gochujang Ramen",
@@ -5038,331 +5062,710 @@ const SEED = [{
     content: "Rest of the {z11} torn over the top."
   }],
   notes_seed: "Leftover Sunday Gravy works instead of the marinara and makes this considerably better. Assembles a day ahead and bakes straight from the fridge with 10 extra minutes covered."
-}];
-
-/* ============================== BEVERAGES ==============================
-   Built to replace the neuroSONIC habit. Same shape as a SEED recipe, so
-   Detail, cook mode, scaling, and the shopping list all work unchanged.
-   Extra fields: caffeine_mg (per serving) and kind (card eyebrow).
-   Caffeine comes from a capsule taken alongside, not dissolved in — the
-   exception is the matcha, which carries its own. */
-const BEVERAGES = [{
-  id: "superfruit-refresher",
-  title: "Superfruit Energy Refresher",
-  subtitle: "The neuroSONIC copy — pomegranate, blueberry, hard bubbles",
-  kind: "Caffeinated",
-  caffeine_mg: 100,
-  protein: "None",
-  audience: "Just me",
-  meal: "Drinks",
-  surfaces: [],
-  base_servings: 1,
-  active_min: 3,
-  total_min: 3,
+}, {
+  id: "red-beans-and-rice",
+  title: "Red Beans and Rice",
+  subtitle: "Monday tradition, smashed for creaminess",
+  protein: "Beans",
+  audience: "Kids too",
+  meal: "Side",
+  surfaces: ["Stovetop"],
+  base_servings: 8,
+  active_min: 25,
+  total_min: 180,
   macros: {
-    cal: 50,
-    p: 0,
-    c: 12,
-    f: 0,
-    fi: 0
+    cal: 340,
+    p: 17,
+    c: 48,
+    f: 8,
+    fi: 13
   },
+  temps: [{
+    label: "Simmer",
+    value: "Low, lid ajar"
+  }],
+  pairs: ["cajun-shrimp-coconut-rice", "nola-bbq-shrimp", "blackened-snapper", "traeger-bbq-chicken", "cajun-steak-butter-beans", "chicken-andouille-gumbo"],
   ingredients: [{
-    id: "d1",
-    name: "unflavored sparkling water, very cold",
-    amount: 15,
-    unit: "fl oz"
+    id: "r1",
+    name: "dried red kidney beans",
+    amount: 1,
+    unit: "lb"
   }, {
-    id: "d2",
-    name: "pomegranate juice",
-    amount: 2,
-    unit: "fl oz"
+    id: "r2",
+    name: "andouille sausage",
+    amount: 12,
+    unit: "oz"
   }, {
-    id: "d3",
-    name: "blueberry juice or concentrate",
-    amount: 0.5,
-    unit: "fl oz"
+    id: "r3",
+    name: "yellow onion",
+    amount: 1
   }, {
-    id: "d4",
-    name: "malic acid powder, food grade",
-    amount: 0.125,
+    id: "r4",
+    name: "celery stalks",
+    amount: 3
+  }, {
+    id: "r5",
+    name: "green bell pepper",
+    amount: 1
+  }, {
+    id: "r6",
+    name: "garlic cloves",
+    amount: 5
+  }, {
+    id: "r7",
+    name: "smoked turkey wing",
+    amount: 1
+  }, {
+    id: "r8",
+    name: "bay leaves",
+    amount: 2
+  }, {
+    id: "r9",
+    name: "Cajun seasoning",
+    amount: 1,
+    unit: "tbsp"
+  }, {
+    id: "r10",
+    name: "dried thyme",
+    amount: 1,
     unit: "tsp"
   }, {
-    id: "d5",
-    name: "fine sea salt",
+    id: "r11",
+    name: "long-grain white rice",
+    amount: 2,
+    unit: "cup"
+  }, {
+    id: "r12",
+    name: "green onions",
+    amount: 4
+  }, {
+    id: "r13",
+    name: "hot sauce",
     amount: 1,
-    unit: "pinch"
+    unit: "tsp"
+  }],
+  steps: [{
+    id: "s1",
+    title: "Soak overnight",
+    timer_seconds: 28800,
+    content: "Cover {r1} with several inches of water and leave them out overnight. Quick-soak works if you forgot — boil 2 minutes, cover, rest an hour — but the overnight beans cook more evenly."
+  }, {
+    id: "s2",
+    title: "Brown the sausage",
+    timer_seconds: 480,
+    content: "Render {r2} sliced into coins over medium, 8 minutes, until the edges crisp. Remove and leave the fat."
+  }, {
+    id: "s3",
+    title: "Trinity in the fat",
+    timer_seconds: 480,
+    content: "Add {r3}, {r4}, and {r5} all diced. Eight minutes until soft. Add {r6} minced for one more."
+  }, {
+    id: "s4",
+    title: "Build the pot",
+    content: "Drained beans in, plus {r7}, {r8}, {r9}, {r10}, and water to cover by two inches. Hold the salt until the end — salting early keeps bean skins tough."
+  }, {
+    id: "s5",
+    title: "Long simmer",
+    timer_seconds: 7200,
+    content: "Bare simmer with the lid ajar, about 2 hours, until the beans are fully tender. Add hot water if they surface."
+  }, {
+    id: "s6",
+    title: "Smash for creaminess",
+    timer_seconds: 600,
+    content: "Press about a cup of beans against the side of the pot with a spoon and stir it back in. That released starch is what makes the pot creamy — it's the whole technique, and it's why you don't need cream or a roux."
+  }, {
+    id: "s7",
+    title: "Finish",
+    timer_seconds: 1200,
+    content: "Return the sausage, pull the turkey wing and shred any meat back in. Simmer 20 more minutes uncovered until it coats a spoon. Salt to taste now."
+  }, {
+    id: "s8",
+    title: "Rice and serve",
+    content: "Cook {r11}. Beans ladled over rice, {r12} and {r13} on top."
+  }],
+  notes_seed: "13g of fiber and 17g of protein a serving — the highest-fiber thing in the app. Makes a big pot on purpose; it freezes for three months and is better on day two."
+}, {
+  id: "air-fryer-broccoli",
+  title: "Air Fryer Broccoli",
+  subtitle: "Charred edges, lemon and Parm",
+  protein: "Vegetable",
+  audience: "Kids too",
+  meal: "Side",
+  surfaces: ["Air fryer"],
+  base_servings: 4,
+  active_min: 8,
+  total_min: 20,
+  macros: {
+    cal: 120,
+    p: 6,
+    c: 10,
+    f: 7,
+    fi: 5
+  },
+  temps: [{
+    label: "Air fryer",
+    value: "390°F"
+  }],
+  pairs: ["reverse-sear-ribeye", "traeger-brisket", "traeger-boneless-beef-ribs", "korean-beef-rice-bowls", "smoked-salmon", "chicken-parmesan"],
+  ingredients: [{
+    id: "b1",
+    name: "broccoli crowns",
+    amount: 1.5,
+    unit: "lb"
+  }, {
+    id: "b2",
+    name: "olive oil",
+    amount: 2,
+    unit: "tbsp"
+  }, {
+    id: "b3",
+    name: "kosher salt",
+    amount: 1,
+    unit: "tsp"
+  }, {
+    id: "b4",
+    name: "garlic powder",
+    amount: 1,
+    unit: "tsp"
+  }, {
+    id: "b5",
+    name: "crushed red pepper flakes",
+    amount: 0.25,
+    unit: "tsp"
+  }, {
+    id: "b6",
+    name: "lemon",
+    amount: 1
+  }, {
+    id: "b7",
+    name: "Parmigiano Reggiano",
+    amount: 0.33,
+    unit: "cup"
+  }],
+  steps: [{
+    id: "s1",
+    title: "Dry it completely",
+    timer_seconds: 300,
+    content: "Cut {b1} into florets with a bit of stem attached and dry them thoroughly in a towel. Wet broccoli steams instead of charring, and no amount of extra time fixes it once it's gone that way."
+  }, {
+    id: "s2",
+    title: "Toss",
+    content: "Coat with {b2}, {b3}, {b4}, and {b5}. Get oil into the crevices — the florets are where the browning happens."
+  }, {
+    id: "s3",
+    title: "Air fry",
+    timer_seconds: 780,
+    content: "390°F, 12–13 minutes, in a single layer with room between pieces. Shake at the halfway mark. Crowding the basket is the other way to end up with steamed broccoli."
+  }, {
+    id: "s4",
+    title: "Finish",
+    content: "Squeeze {b6} over while it's hot and shower with {b7}. Acid and salt right out of the basket is what makes people eat the whole tray."
+  }],
+  notes_seed: "5g fiber a serving, and it fixes the zero-fiber problem on any smoked meat night. Char is a feature — the blackened tips are the best part."
+}, {
+  id: "air-fryer-cauliflower",
+  title: "Air Fryer Cauliflower",
+  subtitle: "Takes any seasoning you throw at it",
+  protein: "Vegetable",
+  audience: "Kids too",
+  meal: "Side",
+  surfaces: ["Air fryer"],
+  base_servings: 4,
+  active_min: 8,
+  total_min: 25,
+  macros: {
+    cal: 110,
+    p: 4,
+    c: 11,
+    f: 7,
+    fi: 4
+  },
+  temps: [{
+    label: "Air fryer",
+    value: "390°F"
+  }],
+  pairs: ["harissa-lamb", "traeger-bbq-chicken", "cajun-steak-butter-beans", "greek-chicken-pita-bowls", "lemongrass-pork"],
+  ingredients: [{
+    id: "c1",
+    name: "cauliflower head",
+    amount: 1
+  }, {
+    id: "c2",
+    name: "olive oil",
+    amount: 2.5,
+    unit: "tbsp"
+  }, {
+    id: "c3",
+    name: "kosher salt",
+    amount: 1,
+    unit: "tsp"
+  }, {
+    id: "c4",
+    name: "smoked paprika",
+    amount: 1,
+    unit: "tsp"
+  }, {
+    id: "c5",
+    name: "ground cumin",
+    amount: 1,
+    unit: "tsp"
+  }, {
+    id: "c6",
+    name: "garlic powder",
+    amount: 1,
+    unit: "tsp"
+  }, {
+    id: "c7",
+    name: "lemon",
+    amount: 1
+  }, {
+    id: "c8",
+    name: "flat-leaf parsley",
+    amount: 3,
+    unit: "tbsp"
+  }],
+  steps: [{
+    id: "s1",
+    title: "Cut and dry",
+    timer_seconds: 300,
+    content: "Break {c1} into florets and dry them well. Cauliflower holds more water than broccoli, so this matters even more here."
+  }, {
+    id: "s2",
+    title: "Season heavily",
+    content: "Toss with {c2}, {c3}, {c4}, {c5}, and {c6}. Cauliflower is bland on its own and can carry twice the seasoning you'd put on most vegetables — season it like you would meat."
+  }, {
+    id: "s3",
+    title: "Air fry",
+    timer_seconds: 960,
+    content: "390°F, 15–16 minutes, single layer, shaking at the halfway point. You want deep brown edges, not pale gold."
+  }, {
+    id: "s4",
+    title: "Finish",
+    content: "Squeeze {c7} over and scatter {c8}."
+  }],
+  notes_seed: "Swap the paprika and cumin for Cajun seasoning next to the Cajun steak, or harissa next to the lamb. It takes whatever the entrée is wearing."
+}, {
+  id: "roasted-honeygold-potatoes",
+  title: "Roasted Honeygold Potatoes",
+  subtitle: "Cut side down, don't touch them",
+  protein: "Vegetable",
+  audience: "Kids too",
+  meal: "Side",
+  surfaces: ["Oven", "Cast iron"],
+  base_servings: 5,
+  active_min: 10,
+  total_min: 40,
+  macros: {
+    cal: 210,
+    p: 4,
+    c: 32,
+    f: 8,
+    fi: 3
+  },
+  temps: [{
+    label: "Oven",
+    value: "425°F"
+  }, {
+    label: "Undisturbed",
+    value: "First 20 min"
+  }],
+  pairs: ["reverse-sear-ribeye", "harissa-lamb", "nola-bbq-shrimp", "chicken-parmesan", "traeger-brisket", "pollo-asado", "smash-burgers"],
+  ingredients: [{
+    id: "p1",
+    name: "Honeygold or baby yellow potatoes",
+    amount: 2,
+    unit: "lb"
+  }, {
+    id: "p2",
+    name: "olive oil",
+    amount: 3,
+    unit: "tbsp"
+  }, {
+    id: "p3",
+    name: "kosher salt",
+    amount: 1.5,
+    unit: "tsp"
+  }, {
+    id: "p4",
+    name: "black pepper",
+    amount: 0.5,
+    unit: "tsp"
+  }, {
+    id: "p5",
+    name: "garlic cloves",
+    amount: 5
+  }, {
+    id: "p6",
+    name: "fresh rosemary",
+    amount: 1,
+    unit: "tbsp"
+  }, {
+    id: "p7",
+    name: "flaky salt",
+    amount: 0.5,
+    unit: "tsp"
+  }],
+  steps: [{
+    id: "s1",
+    title: "Halve, skins on",
+    content: "Halve {p1} through the equator. Never peel them — the skin is most of the fiber and all of the texture."
+  }, {
+    id: "s2",
+    title: "Season hard",
+    content: "Toss with {p2}, {p3}, and {p4}. Waxy potatoes are dense and don't absorb seasoning like a russet does, so salt more aggressively than feels right."
+  }, {
+    id: "s3",
+    title: "Cut side down, undisturbed",
+    timer_seconds: 1200,
+    content: "Arrange cut side flat on a preheated sheet pan or in cast iron. 425°F, 20 minutes, and do not stir, shake, or check. Every early flip costs you the crust."
+  }, {
+    id: "s4",
+    title: "Garlic and finish",
+    timer_seconds: 600,
+    content: "Add {p5} smashed and {p6}, then 8–10 more minutes until the cut faces are deep golden and the garlic softens. Garlic added at the start would burn."
+  }, {
+    id: "s5",
+    title: "Salt again",
+    content: "Out of the oven, hit them with {p7} while hot."
+  }],
+  notes_seed: "If the ribeye just came out of the cast iron, roast these in the beef fat with the leftover garlic and rosemary — better than starting clean. Chilled leftovers develop resistant starch, so cold or reheated they're actually better for you than fresh."
+}, {
+  id: "blistered-snap-peas",
+  title: "Blistered Sugar Snap Peas",
+  subtitle: "Ninety seconds, sesame and salt",
+  protein: "Vegetable",
+  audience: "Kids too",
+  meal: "Side",
+  surfaces: ["Blackstone", "Wok"],
+  base_servings: 4,
+  active_min: 8,
+  total_min: 10,
+  macros: {
+    cal: 90,
+    p: 3,
+    c: 8,
+    f: 5,
+    fi: 3
+  },
+  temps: [{
+    label: "Pan",
+    value: "Screaming hot"
+  }],
+  pairs: ["gochujang-chicken", "gochujang-ramen", "korean-beef-rice-bowls", "pad-krapow", "lemongrass-pork"],
+  ingredients: [{
+    id: "n1",
+    name: "sugar snap peas",
+    amount: 1,
+    unit: "lb"
+  }, {
+    id: "n2",
+    name: "neutral oil",
+    amount: 1,
+    unit: "tbsp"
+  }, {
+    id: "n3",
+    name: "toasted sesame oil",
+    amount: 2,
+    unit: "tsp"
+  }, {
+    id: "n4",
+    name: "garlic cloves",
+    amount: 3
+  }, {
+    id: "n5",
+    name: "kosher salt",
+    amount: 0.75,
+    unit: "tsp"
+  }, {
+    id: "n6",
+    name: "sesame seeds",
+    amount: 2,
+    unit: "tsp"
+  }, {
+    id: "n7",
+    name: "lime",
+    amount: 0.5
+  }],
+  steps: [{
+    id: "s1",
+    title: "Get the pan ripping",
+    timer_seconds: 180,
+    content: "Blackstone or wok as hot as it goes with {n2}. This has to be fast and violent — low heat turns snap peas army green and limp."
+  }, {
+    id: "s2",
+    title: "Blister",
+    timer_seconds: 120,
+    content: "{n1} in a single layer, 90 seconds without moving them, then toss for another 30. You want black spots and a peapod that still snaps."
+  }, {
+    id: "s3",
+    title: "Finish off heat",
+    content: "Kill the heat, add {n4} minced, {n3}, and {n5}, tossing 20 seconds on residual heat only. Garlic on a screaming pan burns instantly."
+  }, {
+    id: "s4",
+    title: "Serve",
+    content: "{n6} and a squeeze of {n7}. Eat them hot — they go soft as they sit."
+  }],
+  notes_seed: "Also the best raw snack in the app: rinse a bag and eat them cold, 25 calories a cup. Edamame is the better macro play if you want protein with it."
+}, {
+  id: "smoked-collard-greens",
+  title: "Smoked Collard Greens",
+  subtitle: "Turkey wing, cider vinegar, long and low",
+  protein: "Vegetable",
+  audience: "Kids too",
+  meal: "Side",
+  surfaces: ["Stovetop"],
+  base_servings: 6,
+  active_min: 20,
+  total_min: 120,
+  macros: {
+    cal: 160,
+    p: 9,
+    c: 12,
+    f: 8,
+    fi: 6
+  },
+  temps: [{
+    label: "Simmer",
+    value: "Low, covered"
+  }],
+  pairs: ["traeger-pulled-pork", "traeger-bbq-chicken", "traeger-brisket", "traeger-boneless-beef-ribs", "honey-garlic-drumsticks", "chicken-andouille-gumbo", "shrimp-etouffee"],
+  ingredients: [{
+    id: "g1",
+    name: "collard greens",
+    amount: 2,
+    unit: "lb"
+  }, {
+    id: "g2",
+    name: "smoked turkey wing",
+    amount: 1
+  }, {
+    id: "g3",
+    name: "yellow onion",
+    amount: 1
+  }, {
+    id: "g4",
+    name: "garlic cloves",
+    amount: 5
+  }, {
+    id: "g5",
+    name: "chicken broth",
+    amount: 4,
+    unit: "cup"
+  }, {
+    id: "g6",
+    name: "apple cider vinegar",
+    amount: 3,
+    unit: "tbsp"
+  }, {
+    id: "g7",
+    name: "crushed red pepper flakes",
+    amount: 0.5,
+    unit: "tsp"
+  }, {
+    id: "g8",
+    name: "kosher salt",
+    amount: 1,
+    unit: "tsp"
+  }, {
+    id: "g9",
+    name: "olive oil",
+    amount: 2,
+    unit: "tbsp"
+  }],
+  steps: [{
+    id: "s1",
+    title: "Strip and cut",
+    timer_seconds: 600,
+    content: "Fold each leaf of {g1} and cut the thick center rib out, then stack and slice into ribbons. The ribs never soften and stay stringy no matter how long you cook them."
+  }, {
+    id: "s2",
+    title: "Wash twice",
+    content: "Collards hold grit deep in the leaves. Two full changes of water, lifting the greens out rather than pouring off, or you'll find sand in the pot."
+  }, {
+    id: "s3",
+    title: "Build the pot likker",
+    timer_seconds: 420,
+    content: "Heat {g9}, soften {g3} diced 5 minutes, add {g4} minced for one. Add {g5}, {g2}, {g7}, and {g8}. Simmer to get the smoke into the broth."
+  }, {
+    id: "s4",
+    title: "Greens in",
+    timer_seconds: 4200,
+    content: "Add the collards in batches as they wilt down. Cover and simmer low 60–70 minutes until fully tender. These are not a crisp-tender vegetable — undercooked collards are tough and bitter."
+  }, {
+    id: "s5",
+    title: "Vinegar at the end",
+    content: "Pull the turkey wing, shred the meat back in, and stir in {g6}. Acid goes in at the finish; added early it toughens the leaves and cooks off anyway. Taste for salt."
+  }],
+  notes_seed: "The pot likker at the bottom is the best part — spoon it over the greens or sop it with cornbread. Better the next day."
+}, {
+  id: "elote",
+  title: "Elote",
+  subtitle: "Charred corn, crema, cotija, chile, lime",
+  protein: "Vegetable",
+  audience: "Kids too",
+  meal: "Side",
+  surfaces: ["Blackstone"],
+  base_servings: 6,
+  active_min: 20,
+  total_min: 25,
+  macros: {
+    cal: 260,
+    p: 7,
+    c: 28,
+    f: 14,
+    fi: 3
+  },
+  temps: [{
+    label: "Griddle",
+    value: "High, rolling char"
+  }],
+  pairs: ["carne-asada", "quesabirria-tacos", "traeger-birria-de-res", "pollo-asado", "chipotle-lime-chicken-bowls"],
+  ingredients: [{
+    id: "e1",
+    name: "corn on the cob",
+    amount: 6
+  }, {
+    id: "e2",
+    name: "Mexican crema",
+    amount: 0.5,
+    unit: "cup"
+  }, {
+    id: "e3",
+    name: "mayonnaise",
+    amount: 0.25,
+    unit: "cup"
+  }, {
+    id: "e4",
+    name: "cotija cheese",
+    amount: 1,
+    unit: "cup"
+  }, {
+    id: "e5",
+    name: "chili powder",
+    amount: 2,
+    unit: "tsp"
+  }, {
+    id: "e6",
+    name: "smoked paprika",
+    amount: 1,
+    unit: "tsp"
+  }, {
+    id: "e7",
+    name: "limes",
+    amount: 2
+  }, {
+    id: "e8",
+    name: "cilantro",
+    amount: 0.33,
+    unit: "cup"
+  }, {
+    id: "e9",
+    name: "garlic clove",
+    amount: 1
+  }],
+  steps: [{
+    id: "s1",
+    title: "Mix the sauce",
+    content: "Stir {e2}, {e3}, and {e9} grated together. Mayo isn't a shortcut here — the emulsion is what makes it cling to a wet cob instead of sliding off."
+  }, {
+    id: "s2",
+    title: "Char the corn",
+    timer_seconds: 600,
+    content: "Blackstone on high, {e1} rolled every couple of minutes, about 10 minutes total until blackened in patches all the way around. You want actual black, not golden."
+  }, {
+    id: "s3",
+    title: "Sauce while hot",
+    content: "Brush the crema mixture over each cob straight off the griddle. Hot corn grips it; cooled corn doesn't."
+  }, {
+    id: "s4",
+    title: "Dress",
+    content: "Roll in {e4}, then dust with {e5} and {e6}. Squeeze {e7} over and scatter {e8}."
+  }],
+  notes_seed: "This one isn't trying to be healthy and shouldn't. It's the right side for birria or carne asada night. Cut the kernels off into a bowl for esquites if the boys would rather not wear it."
+}, {
+  id: "garlic-bread",
+  title: "Garlic Bread",
+  subtitle: "Real butter, real garlic, broiled",
+  protein: "Bread",
+  audience: "Kids too",
+  meal: "Side",
+  surfaces: ["Oven"],
+  base_servings: 8,
+  active_min: 10,
+  total_min: 20,
+  macros: {
+    cal: 280,
+    p: 7,
+    c: 28,
+    f: 16,
+    fi: 2
+  },
+  temps: [{
+    label: "Oven",
+    value: "400°F"
+  }, {
+    label: "Broil",
+    value: "2 min at the end"
+  }],
+  pairs: ["sunday-gravy-meatballs", "baked-ziti", "chicken-parmesan", "cajun-shrimp-pasta"],
+  ingredients: [{
+    id: "d1",
+    name: "French bread loaf",
+    amount: 1
+  }, {
+    id: "d2",
+    name: "unsalted butter, softened",
+    amount: 8,
+    unit: "tbsp"
+  }, {
+    id: "d3",
+    name: "garlic cloves",
+    amount: 6
+  }, {
+    id: "d4",
+    name: "Parmigiano Reggiano",
+    amount: 0.5,
+    unit: "cup"
+  }, {
+    id: "d5",
+    name: "flat-leaf parsley",
+    amount: 3,
+    unit: "tbsp"
   }, {
     id: "d6",
-    name: "allulose, optional",
+    name: "kosher salt",
     amount: 0.5,
     unit: "tsp"
   }, {
     id: "d7",
-    name: "caffeine + L-theanine capsule (100mg / 200mg)",
-    amount: 1
-  }],
-  steps: [{
-    id: "s1",
-    title: "Dissolve the acid first",
-    content: "Stir {d4} and {d5} into {d2} until fully dissolved. Doing this before any carbonation goes in keeps it from foaming over and stops gritty acid settling at the bottom."
-  }, {
-    id: "s2",
-    title: "Build the concentrate",
-    content: "Stir in {d3} and {d6}. Taste it straight — it should be aggressively tart and slightly too sweet, because the sparkling water dilutes it roughly eight to one."
-  }, {
-    id: "s3",
-    title: "Top and stir once",
-    content: "Pour {d1} slowly down the side of the glass or bottle. One gentle stir. Any more and you flatten it."
-  }, {
-    id: "s4",
-    title: "Dose the caffeine",
-    content: "Take {d7} with the first few sips rather than trying to mix it in — the powder is bitter and doesn't disperse in carbonated liquid. Sipping over 20 minutes gets you the slow onset the bottled version had."
-  }],
-  notes_seed: "Batch the concentrate: multiply the juice, malic acid, and salt by seven into a jar, then pour 2.5 oz over sparkling water each morning. Start at 1/8 tsp malic acid and work up — a scant 1/4 tsp is the ceiling before it turns puckering."
-}, {
-  id: "blood-orange-refresher",
-  title: "Blood Orange Passion",
-  subtitle: "The discontinued flavor, rebuilt",
-  kind: "Caffeinated",
-  caffeine_mg: 100,
-  protein: "None",
-  audience: "Just me",
-  meal: "Drinks",
-  surfaces: [],
-  base_servings: 1,
-  active_min: 3,
-  total_min: 3,
-  macros: {
-    cal: 40,
-    p: 0,
-    c: 9,
-    f: 0,
-    fi: 0
-  },
-  ingredients: [{
-    id: "e1",
-    name: "unflavored sparkling water, very cold",
-    amount: 15,
-    unit: "fl oz"
-  }, {
-    id: "e2",
-    name: "blood orange juice",
-    amount: 2,
-    unit: "fl oz"
-  }, {
-    id: "e3",
-    name: "passion fruit puree or nectar",
-    amount: 0.5,
-    unit: "fl oz"
-  }, {
-    id: "e4",
-    name: "malic acid powder, food grade",
-    amount: 0.0625,
-    unit: "tsp"
-  }, {
-    id: "e5",
-    name: "fine sea salt",
-    amount: 1,
-    unit: "pinch"
-  }, {
-    id: "e6",
-    name: "caffeine + L-theanine capsule (100mg / 200mg)",
-    amount: 1
-  }],
-  steps: [{
-    id: "s1",
-    title: "Cut the acid back",
-    content: "Stir {e4} and {e5} into {e2}. Citrus brings its own acid, so this gets half the malic acid the pomegranate version does. Overshoot here and it tastes like a sour candy."
-  }, {
-    id: "s2",
-    title: "Add the passion fruit",
-    content: "Stir in {e3}. This is the piece that made the original taste like more than orange soda — passion fruit reads tropical and slightly funky against the blood orange."
-  }, {
-    id: "s3",
-    title: "Top and dose",
-    content: "Pour {e1} down the side, stir once, and take {e6} with the first sips."
-  }],
-  notes_seed: "Off-season, Sanpellegrino Aranciata Rossa is a legitimate shortcut — use a 11.15 oz can in place of the juice and sparkling water, skip the malic acid entirely, and just dose the capsule alongside. Costs more per serving but takes ten seconds."
-}, {
-  id: "matcha-lime-fizz",
-  title: "Matcha-Lime Fizz",
-  subtitle: "Caffeine and theanine from the leaf, no capsule",
-  kind: "Caffeinated",
-  caffeine_mg: 70,
-  protein: "None",
-  audience: "Just me",
-  meal: "Drinks",
-  surfaces: [],
-  base_servings: 1,
-  active_min: 5,
-  total_min: 5,
-  macros: {
-    cal: 10,
-    p: 1,
-    c: 2,
-    f: 0,
-    fi: 1
-  },
-  ingredients: [{
-    id: "f1",
-    name: "ceremonial grade matcha",
-    amount: 1,
-    unit: "tsp"
-  }, {
-    id: "f2",
-    name: "hot water, about 175°F",
-    amount: 2,
-    unit: "fl oz"
-  }, {
-    id: "f3",
-    name: "lime, juiced",
-    amount: 0.5
-  }, {
-    id: "f4",
-    name: "allulose or monk fruit",
-    amount: 1,
-    unit: "tsp"
-  }, {
-    id: "f5",
-    name: "unflavored sparkling water, very cold",
-    amount: 12,
-    unit: "fl oz"
-  }],
-  steps: [{
-    id: "s1",
-    title: "Whisk the matcha",
-    content: "Sift {f1} into a cup, add {f2}, and whisk hard in a W motion until no lumps remain and a thin foam forms. Water above 180°F makes matcha bitter — if you don't have a thermometer, boil and wait two minutes."
-  }, {
-    id: "s2",
-    title: "Sweeten and chill",
-    content: "Stir {f4} into the hot matcha while it dissolves easily, then add {f3}. Let it cool a minute or pour over ice."
-  }, {
-    id: "s3",
-    title: "Top",
-    content: "Add {f5} slowly. The lime keeps the matcha from tasting grassy and the bubbles make it read as a soda instead of tea."
-  }],
-  notes_seed: "This is the one that most closely reproduces the actual feel of the neuro drink, because matcha's caffeine and L-theanine arrive together naturally at roughly the ratio the bottle was engineered for. Slightly more work, no capsules to buy."
-}, {
-  id: "tart-cherry-yuzu-cooler",
-  title: "Tart Cherry Yuzu Cooler",
-  subtitle: "The afternoon version — same ritual, no caffeine",
-  kind: "Caffeine-free",
-  caffeine_mg: 0,
-  protein: "None",
-  audience: "Just me",
-  meal: "Drinks",
-  surfaces: [],
-  base_servings: 1,
-  active_min: 2,
-  total_min: 2,
-  macros: {
-    cal: 40,
-    p: 0,
-    c: 9,
-    f: 0,
-    fi: 0
-  },
-  ingredients: [{
-    id: "g1",
-    name: "unflavored sparkling water, very cold",
-    amount: 15,
-    unit: "fl oz"
-  }, {
-    id: "g2",
-    name: "tart cherry juice, unsweetened",
-    amount: 2,
-    unit: "fl oz"
-  }, {
-    id: "g3",
-    name: "yuzu juice or lemon juice",
-    amount: 0.5,
-    unit: "fl oz"
-  }, {
-    id: "g4",
-    name: "fine sea salt",
-    amount: 1,
-    unit: "pinch"
-  }],
-  steps: [{
-    id: "s1",
-    title: "Build",
-    content: "Stir {g4} into {g2} and {g3} in the bottom of the glass."
-  }, {
-    id: "s2",
-    title: "Top",
-    content: "Add {g1} slowly, stir once. Tart cherry is dark and slightly tannic, so this scratches the same itch as the superfruit version without the stimulant."
-  }],
-  notes_seed: "Made for after about 2pm, when another 100mg of caffeine would cost you sleep quality that night. The habit is half the appeal of the bottled drink — this keeps the ritual and drops the stimulant."
-}, {
-  id: "watermelon-hibiscus-sparkler",
-  title: "Watermelon-Hibiscus Sparkler",
-  subtitle: "Pre-run, with the salt actually doing something",
-  kind: "Caffeine-free",
-  caffeine_mg: 0,
-  protein: "None",
-  audience: "Just me",
-  meal: "Drinks",
-  surfaces: [],
-  base_servings: 1,
-  active_min: 5,
-  total_min: 20,
-  macros: {
-    cal: 45,
-    p: 0,
-    c: 11,
-    f: 0,
-    fi: 0
-  },
-  ingredients: [{
-    id: "h1",
-    name: "dried hibiscus flowers",
-    amount: 1,
-    unit: "tbsp"
-  }, {
-    id: "h2",
-    name: "hot water",
-    amount: 4,
-    unit: "fl oz"
-  }, {
-    id: "h3",
-    name: "watermelon juice, fresh or bottled",
-    amount: 3,
-    unit: "fl oz"
-  }, {
-    id: "h4",
-    name: "lime, juiced",
-    amount: 0.5
-  }, {
-    id: "h5",
-    name: "fine sea salt",
+    name: "crushed red pepper flakes",
     amount: 0.25,
     unit: "tsp"
-  }, {
-    id: "h6",
-    name: "unflavored sparkling water, very cold",
-    amount: 10,
-    unit: "fl oz"
   }],
   steps: [{
     id: "s1",
-    title: "Steep the hibiscus",
-    timer_seconds: 600,
-    content: "Pour {h2} over {h1} and steep 10 minutes. Strain. It should be dark magenta and sharply tart — hibiscus is doing the same job malic acid does in the other recipes."
+    title: "Make the butter",
+    content: "Mash {d2} with {d3} grated on a microplane, {d5} chopped, {d6}, and {d7}. Grated beats minced — it disperses through the butter instead of sitting in chunks that scorch under the broiler."
   }, {
     id: "s2",
-    title: "Chill it down",
-    timer_seconds: 300,
-    content: "Cool the concentrate in the freezer 5 minutes, or pour it over a few ice cubes and let them melt. Adding sparkling water to hot liquid kills the carbonation instantly."
+    title: "Split and spread",
+    content: "Halve {d1} lengthwise and spread the butter edge to edge, into the corners. Bare spots turn into dry, hard bread."
   }, {
     id: "s3",
-    title: "Build",
-    content: "Combine the hibiscus with {h3}, {h4}, and {h5}. The salt is a real dose here, not a flavor pinch — it's about 575mg sodium, which is what makes this useful before a hot Gulf Coast run."
+    title: "Bake",
+    timer_seconds: 600,
+    content: "400°F, 10 minutes, cut side up, until the butter is fully melted and the edges start to color."
   }, {
     id: "s4",
-    title: "Top",
-    content: "Add {h6}. Drink 30 to 45 minutes before you head out."
+    title: "Cheese and broil",
+    timer_seconds: 120,
+    content: "Scatter {d4} and broil 2 minutes until spotty brown. Stand there and watch it — this goes from perfect to carbon in about 20 seconds."
+  }, {
+    id: "s5",
+    title: "Cut and serve",
+    content: "Slice on the diagonal and serve immediately. It's at its best in the first ten minutes."
   }],
-  notes_seed: "Watermelon carries citrulline, which is the same compound the beetroot supplements are chased for. Nowhere near a supplement dose, but it's a better-tasting delivery than most sports drinks and has a fraction of the sugar."
+  notes_seed: "No apologies on this one. It exists to get sauce off the plate."
 }];
 
 /* Drink pairings, keyed by recipe id.
@@ -5619,13 +6022,18 @@ function beep() {
 
 /* ---- shopping list: aisle routing + aggregation ---- */
 
-const AISLES = [["Bakery", ["bun", "bread", "tortilla", "english muffin", "bagel", "graham cracker"]], ["Produce", ["onion", "shallot", "garlic clove", "cilantro", "parsley", "basil", "mint", "dill", "rosemary", "thyme", "lime", "lemon", "cucumber", "jalapeño", "chile", "pineapple", "green bean", "scallion", "green onion", "ginger", "lemongrass", "corn on the cob", "cherry tomato", "roma tomato", "avocado", "lettuce", "carrot", "poblano", "bell pepper", "serrano", "habanero", "tomatillo", "cabbage", "slaw", "radish", "orange", "potato", "celery", "okra", "strawberr", "blueberr", "raspberr", "banana"]], ["Meat", ["chicken", "beef", "pork", "steak", "ribeye", "filet", "lamb", "thigh", "drumstick", "bacon", "sausage", "andouille", "ham"]], ["Seafood", ["shrimp", "snapper", "salmon", "grouper", "mahi", "scallop", "fish fillet", "cod"]], ["Dairy & eggs", ["butter", "milk", "cheese", "parmesan", "parmigiano", "feta", "yogurt", "egg", "cream", "cotija", "mayonnaise", "queso", "crema", "cottage cheese", "greek yogurt", "cheddar", "mozzarella"]], ["Frozen", ["frozen"]]];
+const AISLES = [["Bakery", ["bun", "bread", "tortilla", "english muffin", "bagel", "graham cracker"]], ["Produce", ["onion", "shallot", "garlic clove", "cilantro", "parsley", "basil", "mint", "dill", "rosemary", "thyme", "lime", "lemon", "cucumber", "jalapeño", "chile", "pineapple", "green bean", "scallion", "green onion", "ginger", "lemongrass", "corn on the cob", "cherry tomato", "roma tomato", "avocado", "lettuce", "carrot", "poblano", "bell pepper", "serrano", "habanero", "tomatillo", "cabbage", "slaw", "radish", "orange", "potato", "celery", "okra", "strawberr", "blueberr", "raspberr", "banana", "broccoli", "cauliflower", "collard", "snap pea", "sugar snap"]], ["Meat", ["chicken", "beef", "pork", "steak", "ribeye", "filet", "lamb", "thigh", "drumstick", "bacon", "sausage", "andouille", "ham", "turkey wing"]], ["Seafood", ["shrimp", "snapper", "salmon", "grouper", "mahi", "scallop", "fish fillet", "cod"]], ["Dairy & eggs", ["butter", "milk", "cheese", "parmesan", "parmigiano", "feta", "yogurt", "egg", "cream", "cotija", "mayonnaise", "queso", "crema", "cottage cheese", "greek yogurt", "cheddar", "mozzarella"]], ["Frozen", ["frozen"]]];
 
 /* Spices and dried goods win outright — "ground cumin" is not meat,
    "garlic powder" is not produce, "chicken bone broth" is not the butcher. */
 const PANTRY_FIRST = ["ground cumin", "ground ginger", "powder", "dried", "seasoning", "paste", "sauce", "vinegar", "broth", "stock", "canned", "peanut butter", "flakes", "seeds", "sugar", "honey", "breadcrumb", "noodle", "spaghetti", "rice", "protein powder", "pudding mix", "oats", "syrup", "chia", "black pepper", "chipotle", "adobo"];
+
+/* Checked before PANTRY_FIRST: produce whose names contain a pantry word.
+   "Honeygold" matches "honey", "sugar snap" matches "sugar". */
+const PRODUCE_FIRST = ["sugar snap", "snap pea", "honeygold", "honeydew", "sweet potato", "honeycrisp"];
 function aisleOf(name) {
   const n = name.toLowerCase();
+  if (PRODUCE_FIRST.some(k => n.includes(k))) return "Produce";
   if (PANTRY_FIRST.some(k => n.includes(k))) return "Pantry";
   for (const [aisle, keys] of AISLES) {
     if (keys.some(k => n.includes(k))) return aisle;
@@ -5954,6 +6362,24 @@ const CSS = `
 }
 .err { color: var(--ember); font-size: 13px; margin-top: 10px; font-family: 'JetBrains Mono', monospace; }
 .ok { color: var(--brass); font-size: 13px; margin-top: 10px; font-family: 'JetBrains Mono', monospace; }
+.sideRow {
+  display: flex; align-items: center; gap: 14px; width: 100%;
+  padding: 13px 0; border-bottom: 1px solid rgba(29,59,71,0.5); transition: 120ms;
+}
+.sideRow:hover { padding-left: 6px; }
+.sideRow .body { flex: 1; }
+.sideRow .nm {
+  font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 21px;
+  text-transform: uppercase; line-height: 1.05;
+}
+.sideRow:hover .nm { color: var(--brass); }
+.sideRow .sub { font-size: 12.5px; color: var(--mute); margin-top: 3px; }
+.sideRow .fib { text-align: right; flex-shrink: 0; }
+.sideRow .fib .v { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 15px; color: var(--brass); }
+.sideRow .fib .l {
+  font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--mute); margin-top: 2px;
+}
 .drinkcat {
   font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.18em;
   text-transform: uppercase; color: var(--brass); margin: 14px 0 2px;
@@ -6147,7 +6573,9 @@ function Detail({
   onCook,
   mult,
   servings,
-  setServings
+  setServings,
+  all,
+  onOpen
 }) {
   const ingMap = {};
   recipe.ingredients.forEach(x => {
@@ -6159,7 +6587,7 @@ function Detail({
   }, /*#__PURE__*/React.createElement("button", {
     className: "back",
     onClick: onBack
-  }, "\u2190 Back"), /*#__PURE__*/React.createElement("h1", {
+  }, "\u2190 All recipes"), /*#__PURE__*/React.createElement("h1", {
     className: "dtitle"
   }, recipe.title), recipe.subtitle && /*#__PURE__*/React.createElement("div", {
     className: "dsub"
@@ -6279,6 +6707,29 @@ function Detail({
       className: "tflag"
     }, "\u25F7 ", fmtDur(s.timer_seconds))));
   }), (() => {
+    /* Sides that list this entree in their `pairs`. */
+    const sides = (all || []).filter(r => r.meal === "Side" && (r.pairs || []).includes(recipe.id));
+    if (!sides.length) return null;
+    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+      className: "sechead"
+    }, /*#__PURE__*/React.createElement("span", null, "Goes with")), sides.map(sd => /*#__PURE__*/React.createElement("button", {
+      className: "sideRow",
+      key: sd.id,
+      onClick: () => onOpen(sd)
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "body"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "nm"
+    }, sd.title), /*#__PURE__*/React.createElement("div", {
+      className: "sub"
+    }, sd.subtitle)), /*#__PURE__*/React.createElement("div", {
+      className: "fib"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "v"
+    }, "+", sd.macros?.fi ?? "—", "g"), /*#__PURE__*/React.createElement("div", {
+      className: "l"
+    }, "fiber")))));
+  })(), (() => {
     const dr = recipe.drinks || DRINKS[recipe.id];
     if (!dr || !dr.alcohol?.length && !dr.zero?.length) return null;
     const row = ([name, why], k) => /*#__PURE__*/React.createElement("div", {
@@ -6296,6 +6747,28 @@ function Detail({
     }, "Zero proof"), dr.zero.map(row)), dr.alcohol?.length > 0 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
       className: "drinkcat"
     }, "With alcohol"), dr.alcohol.map(row)));
+  })(), recipe.meal === "Side" && (recipe.pairs || []).length > 0 && (() => {
+    const mains = (all || []).filter(r => (recipe.pairs || []).includes(r.id));
+    if (!mains.length) return null;
+    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+      className: "sechead"
+    }, /*#__PURE__*/React.createElement("span", null, "Serve alongside")), mains.map(mn => /*#__PURE__*/React.createElement("button", {
+      className: "sideRow",
+      key: mn.id,
+      onClick: () => onOpen(mn)
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "body"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "nm"
+    }, mn.title), /*#__PURE__*/React.createElement("div", {
+      className: "sub"
+    }, mn.subtitle)), /*#__PURE__*/React.createElement("div", {
+      className: "fib"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "v"
+    }, mn.macros?.p ?? "—", "g"), /*#__PURE__*/React.createElement("div", {
+      className: "l"
+    }, "protein")))));
   })(), /*#__PURE__*/React.createElement("div", {
     className: "sechead"
   }, /*#__PURE__*/React.createElement("span", null, "Your notes")), /*#__PURE__*/React.createElement("textarea", {
@@ -6472,7 +6945,8 @@ const SCHEMA = `{
   "subtitle": "One line",
   "protein": "Chicken | Shrimp | Steak | Fish | Pork | Lamb | Beef",
   "audience": "Just me | Kids too",
-  "meal": "Breakfast | Dinner | Dessert",
+  "meal": "Breakfast | Dinner | Side | Dessert",
+  "pairs": ["entree-id"],   // sides only — which entrees to suggest this with
   "surfaces": ["Traeger", "Blackstone", "Cast iron", "Stovetop", "Wok", "Oven"],
   "base_servings": 2,
   "active_min": 20,
@@ -6587,55 +7061,6 @@ function AddView({
 
 /* ================================= APP ================================= */
 
-/* ------------------------------ DRINKS TAB ------------------------------ */
-
-function DrinksView({
-  drinks,
-  onOpen
-}) {
-  const [filter, setFilter] = useState(null);
-  const shown = drinks.filter(d => !filter || d.kind === filter);
-  const kinds = ["Caffeinated", "Caffeine-free"];
-  return /*#__PURE__*/React.createElement("div", {
-    className: "wrap"
-  }, /*#__PURE__*/React.createElement("header", {
-    className: "mast"
-  }, /*#__PURE__*/React.createElement("h1", null, "Drinks", /*#__PURE__*/React.createElement("br", null), "bar"), /*#__PURE__*/React.createElement("div", {
-    className: "sub"
-  }, "Built to replace the bottle \u00B7 ", drinks.length, " on file")), /*#__PURE__*/React.createElement("div", {
-    className: "filters"
-  }, kinds.map(k => /*#__PURE__*/React.createElement("button", {
-    key: k,
-    className: "chip",
-    "data-on": filter === k ? "1" : "0",
-    onClick: () => setFilter(filter === k ? null : k)
-  }, k))), shown.map(d => /*#__PURE__*/React.createElement("button", {
-    className: "card",
-    key: d.id,
-    onClick: () => onOpen(d)
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "eyebrow"
-  }, d.kind, d.caffeine_mg > 0 ? ` \u00B7 ${d.caffeine_mg} mg caffeine` : ""), /*#__PURE__*/React.createElement("h2", null, d.title), d.subtitle && /*#__PURE__*/React.createElement("div", {
-    className: "desc"
-  }, d.subtitle), /*#__PURE__*/React.createElement("div", {
-    className: "strip"
-  }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, d.macros?.cal ?? "\u2014"), " cal"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, d.macros?.c ?? "\u2014", "g"), " carbs"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, d.active_min, "m"), " active")))), /*#__PURE__*/React.createElement("div", {
-    className: "sechead"
-  }, /*#__PURE__*/React.createElement("span", null, "What to buy once")), /*#__PURE__*/React.createElement("div", {
-    className: "step"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "num"
-  }, "01"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Malic acid powder"), /*#__PURE__*/React.createElement("p", null, "Food grade, sold for winemaking and sour candy. A few dollars a bag and it lasts years. This is the ingredient that makes these taste manufactured in a good way \u2014 tart and bright rather than flat and juicy. Citric acid is a substitute but reads sharper and more lemony."))), /*#__PURE__*/React.createElement("div", {
-    className: "step"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "num"
-  }, "02"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Caffeine + L-theanine capsules"), /*#__PURE__*/React.createElement("p", null, "100mg / 200mg pre-combined. This pairing is the only part of the original label with real evidence behind it \u2014 the theanine takes the edge off without blunting the alertness. Buy capsules, not bulk powder; the margin between a dose and a dangerous dose is too small for a kitchen scale."))), /*#__PURE__*/React.createElement("div", {
-    className: "step"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "num"
-  }, "03"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Juice, not syrup"), /*#__PURE__*/React.createElement("p", null, "Pomegranate, tart cherry, and blood orange all keep for weeks and each does about 40 calories of work per drink. Skip anything labeled cocktail or blend \u2014 those are apple juice wearing a costume."))));
-}
-
 const KEY = "bryants-kitchen:v1";
 function Kitchen() {
   const [custom, setCustom] = useState([]);
@@ -6685,10 +7110,6 @@ function Kitchen() {
     if (loaded) save({});
   }, [custom, notes, sel, servMap, listState, loaded, save]);
   const all = [...SEED, ...custom];
-  /* Beverages stay out of `all` so they don't pollute the protein and
-     surface facets on the Recipes tab, but they are searchable for Detail
-     and pickable on the shopping list. */
-  const pool = [...all, ...BEVERAGES];
   const matches = (r, f) => (!f.meal || (r.meal || "Dinner") === f.meal) && (!f.aud || r.audience === f.aud) && (!f.prot || r.protein === f.prot) && (!f.surf || (r.surfaces || []).includes(f.surf));
   const active = {
     meal: fMeal,
@@ -6710,7 +7131,7 @@ function Kitchen() {
     return [...vals];
   };
   const ORDER = {
-    meal: ["Breakfast", "Dinner", "Dessert"],
+    meal: ["Breakfast", "Dinner", "Side", "Dessert"],
     aud: ["Kids too", "Just me"]
   };
   const sortBy = (key, arr) => ORDER[key] ? ORDER[key].filter(v => arr.includes(v)) : arr.sort();
@@ -6736,7 +7157,7 @@ function Kitchen() {
     setFSurface(f.surf);
   };
   const shown = all.filter(r => matches(r, active));
-  const recipe = pool.find(r => r.id === openId);
+  const recipe = all.find(r => r.id === openId);
   const mult = recipe ? servings / (recipe.base_servings || 1) : 1;
   const noteVal = recipe ? notes[recipe.id] ?? recipe.notes_seed ?? "" : "";
   const open = r => {
@@ -6761,7 +7182,9 @@ function Kitchen() {
     onCook: () => setCooking(true),
     mult: mult,
     servings: servings,
-    setServings: setServings
+    setServings: setServings,
+    all: all,
+    onOpen: open
   }), !openId && tab === "recipes" && /*#__PURE__*/React.createElement("div", {
     className: "wrap"
   }, /*#__PURE__*/React.createElement("header", {
@@ -6810,11 +7233,8 @@ function Kitchen() {
     className: "desc"
   }, r.subtitle), /*#__PURE__*/React.createElement("div", {
     className: "strip"
-  }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, r.macros?.p ?? "—", "g"), " protein"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, r.macros?.cal ?? "—"), " cal"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, r.active_min, "m"), " active"))))), !openId && tab === "drinks" && /*#__PURE__*/React.createElement(DrinksView, {
-    drinks: BEVERAGES,
-    onOpen: open
-  }), !openId && tab === "shopping" && /*#__PURE__*/React.createElement(Shopping, {
-    all: pool,
+  }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, r.macros?.p ?? "—", "g"), " protein"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, r.macros?.cal ?? "—"), " cal"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, r.active_min, "m"), " active"))))), !openId && tab === "shopping" && /*#__PURE__*/React.createElement(Shopping, {
+    all: all,
     sel: sel,
     setSel: setSel,
     servMap: servMap,
@@ -6829,9 +7249,6 @@ function Kitchen() {
     "data-on": tab === "recipes" ? "1" : "0",
     onClick: () => setTab("recipes")
   }, "Recipes"), /*#__PURE__*/React.createElement("button", {
-    "data-on": tab === "drinks" ? "1" : "0",
-    onClick: () => setTab("drinks")
-  }, "Drinks"), /*#__PURE__*/React.createElement("button", {
     "data-on": tab === "shopping" ? "1" : "0",
     onClick: () => setTab("shopping")
   }, "List", sel.length > 0 && /*#__PURE__*/React.createElement("span", {
