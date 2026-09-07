@@ -5303,7 +5303,7 @@ const SEED = [{
     { label: "Oven", value: "400°F" },
     { label: "Broil", value: "2 min at the end" }
   ],
-  pairs: ["sunday-gravy-meatballs", "baked-ziti", "chicken-parmesan", "cajun-shrimp-pasta"],
+  pairs: ["sunday-gravy-meatballs", "sunday-sausage-gravy", "baked-ziti", "chicken-parmesan", "cajun-shrimp-pasta"],
   ingredients: [
     { id: "d1", name: "French bread loaf", amount: 1 },
     { id: "d2", name: "unsalted butter, softened", amount: 8, unit: "tbsp" },
@@ -5326,6 +5326,73 @@ const SEED = [{
       content: "Slice on the diagonal and serve immediately. It's at its best in the first ten minutes." }
   ],
   notes_seed: "No apologies on this one. It exists to get sauce off the plate."
+}
+
+,
+{
+  id: "sunday-sausage-gravy",
+  title: "Sunday Sausage Gravy",
+  subtitle: "Ground Italian sausage in the sauce, San Marzano, store-bought meatballs",
+  protein: "Pork", audience: "Kids too", meal: "Dinner",
+  surfaces: ["Stovetop"],
+  base_servings: 8, active_min: 35, total_min: 165,
+  macros: { cal: 540, p: 31, c: 26, f: 34, fi: 4 },
+  temps: [
+    { label: "Sauce", value: "Low, bare bubble" },
+    { label: "Simmer", value: "2 hours, lid ajar" },
+    { label: "Meatballs in", value: "Last 30 min" }
+  ],
+  ingredients: [
+    { id: "g1", name: "extra virgin olive oil", amount: 3, unit: "tbsp" },
+    { id: "g2", name: "ground Italian sausage, mild", amount: 1, unit: "lb" },
+    { id: "g3", name: "yellow onion", amount: 1 },
+    { id: "g4", name: "garlic cloves, peeled", amount: 6 },
+    { id: "g5", name: "Amore double-concentrated tomato paste", amount: 2, unit: "tbsp" },
+    { id: "g6", name: "Chianti or other dry red wine", amount: 0.75, unit: "cup" },
+    { id: "g7", name: "28 oz cans Cento San Marzano whole peeled tomatoes", amount: 2 },
+    { id: "g8", name: "Alessi sun-dried tomatoes in olive oil", amount: 0.33, unit: "cup" },
+    { id: "g9", name: "basil paste", amount: 2, unit: "tbsp" },
+    { id: "g10", name: "fresh basil", amount: 1, unit: "cup" },
+    { id: "g11", name: "dried oregano", amount: 2, unit: "tsp" },
+    { id: "g12", name: "crushed red pepper flakes", amount: 0.5, unit: "tsp" },
+    { id: "g13", name: "kosher salt", amount: 2, unit: "tsp" },
+    { id: "g14", name: "black pepper", amount: 0.5, unit: "tsp" },
+    { id: "g15", name: "sugar", amount: 0.5, unit: "tsp" },
+    { id: "g16", name: "Parmesan rind", amount: 1 },
+    { id: "g17", name: "unsalted butter", amount: 2, unit: "tbsp" },
+    { id: "g18", name: "premade meatballs", amount: 24 },
+    { id: "g19", name: "Parmigiano Reggiano", amount: 1, unit: "cup" },
+    { id: "g20", name: "spaghetti", amount: 1, unit: "lb" }
+  ],
+  steps: [
+    { id: "s1", title: "Brown the sausage hard", timer_seconds: 600,
+      content: "Heat {g1} in a Dutch oven over medium-high. Add {g2} and press it flat, letting it sit and brown before you break it up — a full 3 minutes untouched. Then break into rough chunks, not crumbs, and cook 6–7 more minutes. Leave every bit of the rendered fat in the pot; that fat is the base of the entire sauce." },
+    { id: "s2", title: "Onion in the sausage fat", timer_seconds: 480,
+      content: "Add {g3} finely diced and cook 8 minutes until soft and translucent, scraping up the browned bits the sausage left behind. No color on the onion — sweet, not browned." },
+    { id: "s3", title: "Garlic and heat", timer_seconds: 90,
+      content: "Add {g4} grated or minced along with {g12}. Ninety seconds, stirring constantly. Any longer and the garlic turns bitter." },
+    { id: "s4", title: "Bloom the tomato paste", timer_seconds: 180,
+      content: "Push everything to the edges and drop {g5} into the bare center. Leave it undisturbed 2–3 minutes until it darkens from bright red to brick. Don't stir it — this step is where the deep, savory backbone comes from." },
+    { id: "s5", title: "Deglaze with the Chianti", timer_seconds: 300,
+      content: "Pour in {g6} and scrape the bottom clean. Simmer about 5 minutes until it reduces by two-thirds and no longer smells sharply of alcohol." },
+    { id: "s6", title: "Crush the San Marzanos by hand", timer_seconds: 300,
+      content: "Open {g7} and crush each tomato with your hands straight into the pot, squeezing until it bursts. Never a blender — blending whips in air and turns the sauce pale orange and faintly bitter. Add all the juice from the cans." },
+    { id: "s7", title: "Season and add the sun-drieds",
+      content: "Stir in {g8} roughly chopped along with a spoonful of their oil, plus {g11}, {g13}, {g14}, {g15}, and {g16}. Only half a teaspoon of sugar: San Marzanos are already sweeter and lower in acid than standard canned tomatoes, so taste before adding more." },
+    { id: "s8", title: "Basil stems in, leaves out",
+      content: "Strip the leaves from {g10} and refrigerate them. Drop the bare stems into the pot — they carry real aroma and survive a long simmer, while leaves added now would go black and bitter." },
+    { id: "s9", title: "The long simmer", timer_seconds: 5400,
+      content: "Bare simmer with the lid ajar, 90 minutes, stirring every 20 minutes or so. It's ready when the fat separates orange at the edges and the color has gone deep and unified rather than bright red." },
+    { id: "s10", title: "Meatballs in", timer_seconds: 1800,
+      content: "Nestle {g18} into the sauce and simmer 30 minutes, or 45 if they went in frozen. Keep it at a bare bubble — a hard boil breaks store-bought meatballs apart." },
+    { id: "s11", title: "Finish off the heat",
+      content: "Pull {g16} and the basil stems. Kill the heat and stir in {g17} and {g9}, then tear in half the reserved basil leaves. Taste for salt — the sausage brought plenty, so check before reaching for more." },
+    { id: "s12", title: "Cook the spaghetti", timer_seconds: 540,
+      content: "Cook {g20} one minute under the box time and reserve a full mug of pasta water before draining. That starchy water is the only thing that will loosen the sauce without watering down the flavor." },
+    { id: "s13", title: "Plate",
+      content: "Sauce over the spaghetti, loosened with pasta water to the consistency you want. Tear the rest of the {g10} over each bowl at the table and finish with {g19} grated fresh." }
+  ],
+  notes_seed: "The sausage stays in the sauce rather than coming out — it's the flavor engine here, which is why this needs no meatball-making and still tastes like it simmered all day. Basil paste goes in during the finish for depth, fresh leaves at the table for aroma; using both is better than either alone. Freezes flat in zip bags for three months. Macros exclude pasta."
 }
 ];
 
@@ -5678,6 +5745,16 @@ const DRINKS = {
     alcohol: [["Pinot Noir", "The one red that works with fish — light tannin, and its earthiness likes smoke."], ["Dry Riesling", "Acid cuts the salmon fat, citrus lifts the honey-mustard glaze."]],
     zero: [["Green tea, iced", "Slight tannin and vegetal edge, the classic partner to oily fish."], ["Cucumber-dill sparkling water", "Mirrors the dill rice and keeps the palate clean."]]
   },
+  "sunday-sausage-gravy": {
+    alcohol: [
+      ["Chianti Classico", "The bottle you cooked with — Sangiovese acid meets the tomato acid."],
+      ["Montepulciano d'Abruzzo", "Same high-acid Italian profile, usually a couple dollars less."],
+    ],
+    zero: [
+      ["San Pellegrino, lemon", "Bubbles and minerality cut two hours of rendered sausage fat."],
+      ["Iced tea, unsweet", "Tannin does the job the wine would."],
+    ],
+  },
   "sunday-gravy-meatballs": {
     alcohol: [["Chianti Classico", "High-acid Sangiovese is built for tomato — the acid in the wine meets the acid in the sauce."], ["Montepulciano d'Abruzzo", "Same job, softer and usually under fifteen dollars."]],
     zero: [["San Pellegrino, lemon", "Minerality and bubbles cut through four hours of rendered fat."], ["Italian-style bitter soda", "The bitterness plays the role tannin would."]]
@@ -5909,7 +5986,7 @@ function beep() {
 /* ---- shopping list: aisle routing + aggregation ---- */
 
 const AISLES = [["Bakery", ["bun", "bread", "tortilla", "english muffin", "bagel", "graham cracker"]], ["Produce", ["onion", "shallot", "garlic clove", "cilantro", "parsley", "basil", "mint", "dill", "rosemary", "thyme", "lime", "lemon", "cucumber", "jalapeño", "chile", "pineapple", "green bean", "scallion", "green onion", "ginger", "lemongrass", "corn on the cob", "cherry tomato", "roma tomato", "avocado", "lettuce", "carrot", "celery", "okra",
-    "broccoli", "cauliflower", "collard", "strawberr", "blueberr", "banana", "poblano", "bell pepper", "serrano", "habanero", "tomatillo", "cabbage", "slaw", "radish", "orange", "potato", "celery", "okra", "strawberr", "blueberr", "raspberr", "banana"]], ["Meat", ["chicken", "beef", "pork", "steak", "ribeye", "filet", "lamb", "thigh", "drumstick", "bacon", "sausage", "andouille", "ham", "turkey wing", "andouille", "ham"]], ["Seafood", ["shrimp", "snapper", "salmon", "grouper", "mahi", "scallop", "fish fillet", "cod"]], ["Dairy & eggs", ["butter", "milk", "cheese", "parmesan", "parmigiano", "feta", "yogurt", "egg", "cream", "cotija", "mayonnaise", "queso", "crema", "cottage cheese", "greek yogurt", "cheddar", "mozzarella"]], ["Frozen", ["frozen"]]];
+    "broccoli", "cauliflower", "collard", "strawberr", "blueberr", "banana", "poblano", "bell pepper", "serrano", "habanero", "tomatillo", "cabbage", "slaw", "radish", "orange", "potato", "celery", "okra", "strawberr", "blueberr", "raspberr", "banana"]], ["Meat", ["chicken", "beef", "pork", "steak", "ribeye", "filet", "lamb", "thigh", "drumstick", "bacon", "sausage", "andouille", "ham", "turkey wing", "meatball", "andouille", "ham"]], ["Seafood", ["shrimp", "snapper", "salmon", "grouper", "mahi", "scallop", "fish fillet", "cod"]], ["Dairy & eggs", ["butter", "milk", "cheese", "parmesan", "parmigiano", "feta", "yogurt", "egg", "cream", "cotija", "mayonnaise", "queso", "crema", "cottage cheese", "greek yogurt", "cheddar", "mozzarella"]], ["Frozen", ["frozen"]]];
 
 /* Spices and dried goods win outright — "ground cumin" is not meat,
    "garlic powder" is not produce, "chicken bone broth" is not the butcher. */
