@@ -2206,7 +2206,7 @@ const SEED = [{
   steps: [{
     id: "s-br1",
     title: "Trim and season",
-    content: "Trim the brisket so the fat cap is roughly 1/4 inch and remove hard exterior fat. Coat evenly with {br2}, {br3}, and {br4}. Refrigerate uncovered overnight."
+    content: "Trim {br1} so the fat cap is roughly 1/4 inch and remove hard exterior fat. Coat evenly with {br2}, {br3}, and {br4}. Refrigerate uncovered overnight."
   }, {
     id: "s-br2",
     title: "Smoke",
@@ -5096,7 +5096,8 @@ const SEED = [{
   macros: { cal: 120, p: 6, c: 10, f: 7, fi: 5 },
   temps: [{ label: "Air fryer", value: "390°F" }],
   pairs: ["reverse-sear-ribeye", "traeger-brisket", "traeger-boneless-beef-ribs",
-          "korean-beef-rice-bowls", "smoked-salmon", "chicken-parmesan"],
+          "korean-beef-rice-bowls", "smoked-salmon", "chicken-parmesan",
+          "air-fryer-chicken-tenders", "traeger-pizza-night"],
   ingredients: [
     { id: "b1", name: "broccoli crowns", amount: 1.5, unit: "lb" },
     { id: "b2", name: "olive oil", amount: 2, unit: "tbsp" },
@@ -5164,7 +5165,8 @@ const SEED = [{
     { label: "Undisturbed", value: "First 20 min" }
   ],
   pairs: ["reverse-sear-ribeye", "harissa-lamb", "nola-bbq-shrimp", "chicken-parmesan",
-          "traeger-brisket", "pollo-asado", "smash-burgers"],
+          "traeger-brisket", "pollo-asado", "smash-burgers",
+          "air-fryer-chicken-tenders", "blackstone-cheesesteaks"],
   ingredients: [
     { id: "p1", name: "Honeygold or baby yellow potatoes", amount: 2, unit: "lb" },
     { id: "p2", name: "olive oil", amount: 3, unit: "tbsp" },
@@ -5393,6 +5395,147 @@ const SEED = [{
       content: "Sauce over the spaghetti, loosened with pasta water to the consistency you want. Tear the rest of the {g10} over each bowl at the table and finish with {g19} grated fresh." }
   ],
   notes_seed: "The sausage stays in the sauce rather than coming out — it's the flavor engine here, which is why this needs no meatball-making and still tastes like it simmered all day. Basil paste goes in during the finish for depth, fresh leaves at the table for aroma; using both is better than either alone. Freezes flat in zip bags for three months. Macros exclude pasta."
+}
+
+,
+{
+  id: "traeger-pizza-night",
+  title: "Traeger Pizza Night",
+  subtitle: "Everyone builds their own, 6 minutes on the stone",
+  protein: "Cheese", audience: "Kids too", meal: "Dinner",
+  surfaces: ["Traeger"],
+  base_servings: 4, active_min: 40, total_min: 120,
+  macros: { cal: 680, p: 30, c: 74, f: 28, fi: 4 },
+  temps: [
+    { label: "Traeger", value: "500°F, max" },
+    { label: "Stone preheat", value: "45 min" },
+    { label: "Per pizza", value: "6–8 min" }
+  ],
+  ingredients: [
+    { id: "z1", name: "pizza dough balls", amount: 4 },
+    { id: "z2", name: "semolina flour", amount: 0.5, unit: "cup" },
+    { id: "z3", name: "canned San Marzano tomatoes", amount: 1.5, unit: "cup" },
+    { id: "z4", name: "garlic cloves", amount: 2 },
+    { id: "z5", name: "kosher salt", amount: 1, unit: "tsp" },
+    { id: "z6", name: "extra virgin olive oil", amount: 3, unit: "tbsp" },
+    { id: "z7", name: "low-moisture mozzarella", amount: 16, unit: "oz" },
+    { id: "z8", name: "Parmigiano Reggiano", amount: 0.5, unit: "cup" },
+    { id: "z9", name: "pepperoni", amount: 4, unit: "oz" },
+    { id: "z10", name: "fresh basil", amount: 0.5, unit: "cup" },
+    { id: "z11", name: "crushed red pepper flakes", amount: 0.5, unit: "tsp" }
+  ],
+  steps: [
+    { id: "s1", title: "Dough to room temp", timer_seconds: 3600,
+      content: "Take {z1} out of the fridge a full hour before. Cold dough fights you, tears when you stretch it, and won't puff on the stone. This is the step that decides whether the night is fun or frustrating." },
+    { id: "s2", title: "Preheat the stone properly", timer_seconds: 2700,
+      content: "Pizza stone on the Traeger, crank to 500°F, and give it 45 minutes. The grill hits temp long before the stone does, and a cool stone is why homemade pizza comes out pale and soft on the bottom." },
+    { id: "s3", title: "Quick sauce",
+      content: "Crush {z3} by hand, stir in {z4} grated, {z5}, and a tablespoon of {z6}. That's it — raw sauce cooks on the pizza, and a cooked-down sauce tastes flat by the time it comes off." },
+    { id: "s4", title: "Set up the station",
+      content: "Shred {z7}, grate {z8}, slice {z9}, and put everything in bowls where the boys can reach. Dust a peel or the back of a sheet pan heavily with {z2} — it acts like ball bearings and is the only thing that keeps a built pizza from welding itself down." },
+    { id: "s5", title: "Stretch, don't roll",
+      content: "Press each dough ball from the center outward with your fingertips, leaving the outer inch alone, then stretch it over your knuckles. A rolling pin crushes the gas bubbles and you lose the puffed edge entirely." },
+    { id: "s6", title: "Build it fast and light", timer_seconds: 120,
+      content: "Thin layer of sauce, cheese, toppings. Under-topping beats over-topping every time — a loaded pizza steams and goes soggy in the middle. Work quickly; dough sitting on the peel starts sticking within about two minutes." },
+    { id: "s7", title: "Launch and bake", timer_seconds: 420,
+      content: "Sharp forward jerk to slide it onto the stone. 6–8 minutes at 500°F until the crust is spotted brown and the cheese is bubbling with a few dark blisters." },
+    { id: "s8", title: "Finish and repeat",
+      content: "Tear {z10} over the hot pizza, drizzle with {z6}, {z11} on the adult ones. Let the stone recover 3–4 minutes between pizzas or the next crust will be pale underneath." }
+  ],
+  notes_seed: "Store-bought dough from the deli case is completely fine and turns this into a weeknight. Let each kid build their own — the point is as much the assembly line as the pizza."
+},
+{
+  id: "air-fryer-chicken-tenders",
+  title: "Air Fryer Chicken Tenders",
+  subtitle: "Buttermilk brine, panko crust, no deep fryer",
+  protein: "Chicken", audience: "Kids too", meal: "Dinner",
+  surfaces: ["Air fryer"],
+  base_servings: 4, active_min: 25, total_min: 90,
+  macros: { cal: 480, p: 52, c: 32, f: 14, fi: 2 },
+  temps: [
+    { label: "Air fryer", value: "400°F" },
+    { label: "Per side", value: "8 min / 4 min" },
+    { label: "Pull at", value: "160°F" }
+  ],
+  ingredients: [
+    { id: "t1", name: "chicken tenderloins", amount: 2, unit: "lb" },
+    { id: "t2", name: "buttermilk", amount: 1.5, unit: "cup" },
+    { id: "t3", name: "kosher salt", amount: 2, unit: "tsp" },
+    { id: "t4", name: "hot sauce", amount: 1, unit: "tbsp" },
+    { id: "t5", name: "all-purpose flour", amount: 0.75, unit: "cup" },
+    { id: "t6", name: "panko breadcrumbs", amount: 2.5, unit: "cup" },
+    { id: "t7", name: "garlic powder", amount: 2, unit: "tsp" },
+    { id: "t8", name: "onion powder", amount: 2, unit: "tsp" },
+    { id: "t9", name: "smoked paprika", amount: 2, unit: "tsp" },
+    { id: "t10", name: "black pepper", amount: 1, unit: "tsp" },
+    { id: "t11", name: "eggs", amount: 2 },
+    { id: "t12", name: "olive oil spray", amount: 1 }
+  ],
+  steps: [
+    { id: "s1", title: "Buttermilk brine", timer_seconds: 3600,
+      content: "Submerge {t1} in {t2} with {t3} and {t4}. One hour minimum in the fridge, up to four. The acid and salt season all the way through and keep lean tenderloins from drying out — this is the difference between homemade tenders and restaurant ones." },
+    { id: "s2", title: "Toast the panko", timer_seconds: 300,
+      content: "Toast {t6} in a dry skillet over medium 4–5 minutes until light golden, stirring constantly. Air fryers brown from hot air alone, not oil, so untoasted panko comes out pale and raw-tasting. Five minutes here fixes the one real weakness of air-fried breading." },
+    { id: "s3", title: "Set up breading",
+      content: "Dish one: {t5}. Dish two: {t11} beaten with a splash of the brine. Dish three: the toasted panko mixed with {t7}, {t8}, {t9}, and {t10}. Season the flour lightly too — every layer gets seasoned or the crust tastes like nothing." },
+    { id: "s4", title: "Bread them",
+      content: "Shake the tender, then flour, egg, panko, pressing the crumbs on firmly. Wet hand for the egg, dry hand for the crumbs, or you'll bread your own fingers into a club." },
+    { id: "s5", title: "Rest the breading", timer_seconds: 600,
+      content: "Ten minutes on a rack. The coating hydrates and grips instead of blowing off in the air fryer's fan." },
+    { id: "s6", title: "Spray and load", timer_seconds: 60,
+      content: "Mist both sides with {t12}. Single layer with space between — a crowded basket steams and you get soft spots. Two batches beats one crowded one." },
+    { id: "s7", title: "Air fry", timer_seconds: 480,
+      content: "400°F, 8 minutes." },
+    { id: "s8", title: "Flip and finish", timer_seconds: 240,
+      content: "Flip, mist again, 4 more minutes. Pull at 160°F — tenderloins are thin and lean and go from juicy to chalky in about ninety seconds." },
+    { id: "s9", title: "Rest and serve", timer_seconds: 180,
+      content: "Three minutes on a rack, never a plate — trapped steam softens the bottom crust you just built." }
+  ],
+  notes_seed: "52g of protein a serving and no vat of oil. Freeze breaded-but-uncooked on a sheet pan, then bag them; straight from frozen at 400°F for about 14 minutes."
+},
+{
+  id: "blackstone-cheesesteaks",
+  title: "Blackstone Cheesesteaks",
+  subtitle: "Freezer-sliced sirloin, griddled onions, provolone",
+  protein: "Steak", audience: "Kids too", meal: "Dinner",
+  surfaces: ["Blackstone"],
+  base_servings: 4, active_min: 30, total_min: 60,
+  macros: { cal: 720, p: 48, c: 44, f: 38, fi: 3 },
+  temps: [
+    { label: "Griddle", value: "High for meat" },
+    { label: "Onions", value: "Medium, slow" }
+  ],
+  ingredients: [
+    { id: "p1", name: "top sirloin or ribeye", amount: 2, unit: "lb" },
+    { id: "p2", name: "yellow onions", amount: 2 },
+    { id: "p3", name: "green bell pepper", amount: 1 },
+    { id: "p4", name: "provolone slices", amount: 8 },
+    { id: "p5", name: "hoagie rolls", amount: 4 },
+    { id: "p6", name: "unsalted butter", amount: 3, unit: "tbsp" },
+    { id: "p7", name: "neutral oil", amount: 2, unit: "tbsp" },
+    { id: "p8", name: "kosher salt", amount: 1.5, unit: "tsp" },
+    { id: "p9", name: "black pepper", amount: 1, unit: "tsp" },
+    { id: "p10", name: "garlic powder", amount: 1, unit: "tsp" }
+  ],
+  steps: [
+    { id: "s1", title: "Freeze the beef firm", timer_seconds: 1800,
+      content: "{p1} into the freezer for 25–30 minutes, until firm but not solid. This is the entire trick — you cannot slice beef thin enough for a cheesesteak at room temperature with a home knife." },
+    { id: "s2", title: "Slice paper thin",
+      content: "Against the grain, as thin as you can manage. Thin slices cook in seconds and stay tender; thick ones turn to chew no matter what you do afterward." },
+    { id: "s3", title: "Onions low and slow", timer_seconds: 900,
+      content: "Blackstone on medium at one end. {p2} sliced thin with a tablespoon of {p7}, 15 minutes until deeply soft and browned at the edges. Start these first — they take four times as long as the meat and rushing them is the most common mistake." },
+    { id: "s4", title: "Peppers in", timer_seconds: 360,
+      content: "Add {p3} sliced to the onions for the last 6 minutes. Push the whole pile to a cool zone when they're done." },
+    { id: "s5", title: "Toast the rolls", timer_seconds: 120,
+      content: "Split {p5}, butter the cut faces with {p6}, and toast face-down 2 minutes. A toasted interior is what keeps the roll from disintegrating under the meat juices." },
+    { id: "s6", title: "Sear the beef hard", timer_seconds: 180,
+      content: "Other end of the griddle screaming hot with the rest of {p7}. Beef down in a single layer, season with {p8}, {p9}, and {p10}. Let it sit 60 seconds to brown, then chop and toss with two spatulas for another 2 minutes. Do not stir constantly — that steams it gray." },
+    { id: "s7", title: "Combine and melt", timer_seconds: 90,
+      content: "Fold the onions and peppers into the meat, divide into four roll-length piles, and lay {p4} over each. Squirt of water beside them, cover with a dome or bowl, 90 seconds to melt." },
+    { id: "s8", title: "Scoop and serve",
+      content: "Slide a spatula under each pile and invert it straight into a roll. Serve immediately — these do not hold." }
+  ],
+  notes_seed: "Same freezer-slice method as the Korean beef bowls; once you've done it once you'll use it for both. Provolone melts cleanest, but white American melts even better if the boys prefer it milder."
 }
 ];
 
@@ -5763,6 +5906,36 @@ const DRINKS = {
     alcohol: [["Japanese lager", "Crisp and dry; designed to sit next to salty broth."], ["Soju, chilled", "Neutral and clean — resets the palate between spoonfuls."]],
     zero: [["Barley tea", "Toasty, unsweetened, cuts the richness of a bone-broth base."], ["Yuzu sparkling water", "Sharp citrus against the fermented chile depth."]]
   },
+  "traeger-pizza-night": {
+    alcohol: [
+      ["Chianti Classico", "Acid to match the tomato — the same rule as any red-sauce dish."],
+      ["Pilsner", "Cold and clean against melted cheese and pepperoni fat."],
+    ],
+    zero: [
+      ["San Pellegrino, lemon", "Bubbles cut the cheese without adding sugar."],
+      ["Root beer", "The pizza-night default, and the boys will ask for it anyway."],
+    ],
+  },
+  "air-fryer-chicken-tenders": {
+    alcohol: [
+      ["Pilsner", "Light and carbonated; scrubs the breading clean."],
+      ["Dry rosé", "Enough acid for fried food, enough fruit for the paprika."],
+    ],
+    zero: [
+      ["Arnold Palmer", "Tea tannin and lemon acid, both cutting the crust."],
+      ["Sparkling water, lemon", "Zero sugar, keeps the palate clean between tenders."],
+    ],
+  },
+  "blackstone-cheesesteaks": {
+    alcohol: [
+      ["Lager", "Carbonation against beef fat and melted provolone."],
+      ["Zinfandel", "Jammy and low-tannin, good with griddled onions."],
+    ],
+    zero: [
+      ["Root beer", "Vanilla and sarsaparilla with griddled beef, same logic as the burgers."],
+      ["Unsweet tea, lemon", "Tannin cuts the cheese and the fat."],
+    ],
+  },
   "smash-burgers": {
     alcohol: [["Pilsner or American lager", "Carbonation scrubs beef fat. Anything hoppier fights the sauce."], ["Zinfandel", "Jammy and low-tannin, good with char and pickle."]],
     zero: [["Root beer", "The classic for a reason — vanilla and sarsaparilla against griddled beef."], ["Athletic Brewing Upside Dawn", "Zero-proof golden ale; same palate-scrubbing job as the lager."]]
@@ -5985,8 +6158,9 @@ function beep() {
 
 /* ---- shopping list: aisle routing + aggregation ---- */
 
-const AISLES = [["Bakery", ["bun", "bread", "tortilla", "english muffin", "bagel", "graham cracker"]], ["Produce", ["onion", "shallot", "garlic clove", "cilantro", "parsley", "basil", "mint", "dill", "rosemary", "thyme", "lime", "lemon", "cucumber", "jalapeño", "chile", "pineapple", "green bean", "scallion", "green onion", "ginger", "lemongrass", "corn on the cob", "cherry tomato", "roma tomato", "avocado", "lettuce", "carrot", "celery", "okra",
-    "broccoli", "cauliflower", "collard", "strawberr", "blueberr", "banana", "poblano", "bell pepper", "serrano", "habanero", "tomatillo", "cabbage", "slaw", "radish", "orange", "potato", "celery", "okra", "strawberr", "blueberr", "raspberr", "banana"]], ["Meat", ["chicken", "beef", "pork", "steak", "ribeye", "filet", "lamb", "thigh", "drumstick", "bacon", "sausage", "andouille", "ham", "turkey wing", "meatball", "andouille", "ham"]], ["Seafood", ["shrimp", "snapper", "salmon", "grouper", "mahi", "scallop", "fish fillet", "cod"]], ["Dairy & eggs", ["butter", "milk", "cheese", "parmesan", "parmigiano", "feta", "yogurt", "egg", "cream", "cotija", "mayonnaise", "queso", "crema", "cottage cheese", "greek yogurt", "cheddar", "mozzarella"]], ["Frozen", ["frozen"]]];
+const AISLES = [["Bakery", ["bun", "bread", "tortilla", "english muffin", "bagel", "graham cracker",
+    "hoagie", "sub roll", "pizza dough"]], ["Produce", ["onion", "shallot", "garlic clove", "cilantro", "parsley", "basil", "mint", "dill", "rosemary", "thyme", "lime", "lemon", "cucumber", "jalapeño", "chile", "pineapple", "green bean", "scallion", "green onion", "ginger", "lemongrass", "corn on the cob", "cherry tomato", "roma tomato", "avocado", "lettuce", "carrot", "celery", "okra",
+    "broccoli", "cauliflower", "collard", "strawberr", "blueberr", "banana", "poblano", "bell pepper", "serrano", "habanero", "tomatillo", "cabbage", "slaw", "radish", "orange", "potato", "celery", "okra", "strawberr", "blueberr", "raspberr", "banana"]], ["Meat", ["chicken", "beef", "pork", "steak", "ribeye", "filet", "lamb", "thigh", "drumstick", "bacon", "sausage", "andouille", "ham", "turkey wing", "meatball", "pepperoni", "andouille", "ham"]], ["Seafood", ["shrimp", "snapper", "salmon", "grouper", "mahi", "scallop", "fish fillet", "cod"]], ["Dairy & eggs", ["butter", "milk", "cheese", "parmesan", "parmigiano", "feta", "yogurt", "egg", "cream", "cotija", "mayonnaise", "queso", "crema", "cottage cheese", "greek yogurt", "cheddar", "mozzarella", "provolone", "buttermilk"]], ["Frozen", ["frozen"]]];
 
 /* Spices and dried goods win outright — "ground cumin" is not meat,
    "garlic powder" is not produce, "chicken bone broth" is not the butcher. */
