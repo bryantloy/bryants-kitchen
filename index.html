@@ -9,8 +9,11 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Bryant's Kitchen">
 <title>Bryant's Kitchen</title>
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B1519'/%3E%3Ctext y='.92em' x='.5em' text-anchor='middle' font-size='64' fill='%23E2952F' font-family='sans-serif' font-weight='bold'%3EBK%3C/text%3E%3C/svg%3E">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B1519'/%3E%3Ctext y='.92em' x='.5em' text-anchor='middle' font-size='64' fill='%23E2952F' font-family='sans-serif' font-weight='bold'%3EBK%3C/text%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+
 <style>
   html, body { margin:0; padding:0; background:#0B1519; }
   body { padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom); }
@@ -1060,7 +1063,7 @@ const SEED = [{
     unit: "cup"
   }, {
     id: "m5",
-    name: "whole milk",
+    name: "Fairlife whole milk",
     amount: 1,
     unit: "cup"
   }, {
@@ -5199,8 +5202,8 @@ const SEED = [{
   base_servings: 4, active_min: 8, total_min: 10,
   macros: { cal: 90, p: 3, c: 8, f: 5, fi: 3 },
   temps: [{ label: "Pan", value: "Screaming hot" }],
-  pairs: ["gochujang-chicken", "gochujang-ramen", "korean-beef-rice-bowls",
-          "pad-krapow", "lemongrass-pork"],
+  pairs: ["gochujang-chicken", "gochujang-ramen", "shoyu-chicken-ramen",
+          "korean-beef-rice-bowls", "pad-krapow", "lemongrass-pork", "hainanese-chicken-rice"],
   ingredients: [
     { id: "n1", name: "sugar snap peas", amount: 1, unit: "lb" },
     { id: "n2", name: "neutral oil", amount: 1, unit: "tbsp" },
@@ -5305,7 +5308,8 @@ const SEED = [{
     { label: "Oven", value: "400°F" },
     { label: "Broil", value: "2 min at the end" }
   ],
-  pairs: ["sunday-gravy-meatballs", "sunday-sausage-gravy", "baked-ziti", "chicken-parmesan", "cajun-shrimp-pasta"],
+  pairs: ["sunday-gravy-meatballs", "sunday-sausage-gravy", "baked-ziti", "chicken-parmesan",
+          "cajun-shrimp-pasta", "ragu-bolognese", "lemon-garlic-shrimp-pasta"],
   ingredients: [
     { id: "d1", name: "French bread loaf", amount: 1 },
     { id: "d2", name: "unsalted butter, softened", amount: 8, unit: "tbsp" },
@@ -5536,6 +5540,299 @@ const SEED = [{
       content: "Slide a spatula under each pile and invert it straight into a roll. Serve immediately — these do not hold." }
   ],
   notes_seed: "Same freezer-slice method as the Korean beef bowls; once you've done it once you'll use it for both. Provolone melts cleanest, but white American melts even better if the boys prefer it milder."
+}
+
+,
+{
+  id: "ragu-bolognese",
+  title: "Ragù alla Bolognese",
+  subtitle: "Soffritto, milk-braised beef, barely any tomato",
+  protein: "Beef", audience: "Kids too", meal: "Dinner",
+  surfaces: ["Stovetop"],
+  base_servings: 6, active_min: 35, total_min: 210,
+  macros: { cal: 820, p: 45, c: 95, f: 26, fi: 5 },
+  temps: [
+    { label: "Simmer", value: "Barest bubble" },
+    { label: "Milk stage", value: "Before the wine" },
+    { label: "Total", value: "3 hours" }
+  ],
+  ingredients: [
+    { id: "o1", name: "olive oil", amount: 2, unit: "tbsp" },
+    { id: "o2", name: "pancetta", amount: 3, unit: "oz" },
+    { id: "o3", name: "yellow onion", amount: 1 },
+    { id: "o4", name: "carrots", amount: 2 },
+    { id: "o5", name: "celery stalks", amount: 2 },
+    { id: "o6", name: "ground beef, 85/15", amount: 1.5, unit: "lb" },
+    { id: "o7", name: "Fairlife whole milk", amount: 1, unit: "cup" },
+    { id: "o8", name: "dry white wine", amount: 1, unit: "cup" },
+    { id: "o9", name: "tomato paste", amount: 3, unit: "tbsp" },
+    { id: "o10", name: "beef broth", amount: 2, unit: "cup" },
+    { id: "o11", name: "kosher salt", amount: 2, unit: "tsp" },
+    { id: "o12", name: "black pepper", amount: 1, unit: "tsp" },
+    { id: "o13", name: "whole nutmeg", amount: 1 },
+    { id: "o14", name: "egg tagliatelle or pappardelle", amount: 1.5, unit: "lb" },
+    { id: "o15", name: "Parmigiano Reggiano", amount: 1, unit: "cup" }
+  ],
+  steps: [
+    { id: "s1", title: "Cut the soffritto fine", timer_seconds: 600,
+      content: "Dice {o3}, {o4}, and {o5} as small as you can stand — about an eighth inch. This isn't the chunky base of a Sunday gravy; in a bolognese the vegetables are supposed to dissolve into the sauce and disappear. Big dice stay recognizable for three hours." },
+    { id: "s2", title: "Render the pancetta", timer_seconds: 420,
+      content: "Heat {o1} in a Dutch oven over medium and render {o2} finely chopped, 6–7 minutes, until the fat is out and the bits are just golden." },
+    { id: "s3", title: "Sweat the soffritto", timer_seconds: 720,
+      content: "Add the vegetables and cook 12 minutes until completely soft and slumped. No browning. This is a long, gentle sweat — you're building sweetness, not color." },
+    { id: "s4", title: "Add the beef, don't brown it", timer_seconds: 480,
+      content: "Add {o6} and break it up fine as it loses its pink, about 8 minutes. Counterintuitive, but a true bolognese doesn't get a hard sear — you want the meat tender and fine-textured, not crusted. Browning here makes it chewy over a long braise." },
+    { id: "s5", title: "Milk first", timer_seconds: 900,
+      content: "Pour in {o7} and simmer 15 minutes until it's almost fully absorbed. Milk goes in before the wine, always — the lactic acid tenderizes the beef while the pot is still neutral. Add it after the acidic wine and it curdles." },
+    { id: "s6", title: "Then the wine", timer_seconds: 900,
+      content: "Add {o8} and simmer another 15 minutes until nearly dry, scraping the bottom. White wine, not red — it keeps the sauce tasting of meat and dairy instead of turning it into a tomato braise." },
+    { id: "s7", title: "Paste and broth",
+      content: "Stir in {o9} and cook 2 minutes, then add {o10}, {o11}, {o12}, and a few scrapes of {o13}. Three tablespoons of paste is the entire tomato content — bolognese is a meat sauce with tomato in it, not the reverse." },
+    { id: "s8", title: "The long simmer", timer_seconds: 7200,
+      content: "Barest possible bubble, lid ajar, 2 hours. Add a splash of water any time it threatens to go dry. It's done when the fat separates orange at the edges and the sauce looks glossy and unified rather than wet. Spoon most of that surfaced fat off before the pasta goes in — rendering out of 85/15 and then skimming gets you tenderness during the braise without carrying the fat to the plate, which is why it beats starting with lean beef." },
+    { id: "s9", title: "Cook the noodles", timer_seconds: 480,
+      content: "Cook {o14} one minute under the box time and save two mugs of pasta water. Flat and egg-based is the whole requirement: this sauce is heavy and fine-textured, so it needs a broad face to cling to, and egg dough is more porous than semolina so it grips fat-rich sauce instead of shedding it. Pappardelle is the best substitute for tagliatelle, then fettuccine, then rigatoni. Round strands let the sauce slide off into the bottom of the bowl." },
+    { id: "s10", title: "Marry in the pan", timer_seconds: 120,
+      content: "Pasta into the sauce with a splash of water, tossing hard for a full minute so the starch binds it. Finish with {o15}." }
+  ],
+  notes_seed: "95g of carbs a serving — this is the night-before-a-long-run anchor. Eat it 11+ hours out and it's fully cleared by a 5:30 start. Deliberately different from the Sunday gravy: meat-forward, milk-braised, almost no tomato. If dry tagliatelle isn't on the shelf, check the refrigerated case — fresh egg pasta cooks in about three minutes and is excellent here. Freezes three months."
+},
+{
+  id: "shoyu-chicken-ramen",
+  title: "Shoyu Chicken Ramen",
+  subtitle: "Clean savory broth, no chile, soft egg",
+  protein: "Chicken", audience: "Kids too", meal: "Dinner",
+  surfaces: ["Stovetop"],
+  base_servings: 4, active_min: 30, total_min: 75,
+  macros: { cal: 750, p: 53, c: 77, f: 19, fi: 3 },
+  temps: [
+    { label: "Broth", value: "Never boils" },
+    { label: "Soft egg", value: "7 min" },
+    { label: "Noodles", value: "Separate water" }
+  ],
+  ingredients: [
+    { id: "h1", name: "boneless skinless chicken thighs", amount: 1.5, unit: "lb" },
+    { id: "h2", name: "chicken broth", amount: 8, unit: "cup" },
+    { id: "h3", name: "kombu", amount: 1, unit: "piece" },
+    { id: "h4", name: "dried shiitake mushrooms", amount: 4 },
+    { id: "h5", name: "low-sodium soy sauce", amount: 0.33, unit: "cup" },
+    { id: "h6", name: "mirin", amount: 3, unit: "tbsp" },
+    { id: "h7", name: "rice vinegar", amount: 1, unit: "tsp" },
+    { id: "h8", name: "garlic cloves", amount: 4 },
+    { id: "h9", name: "fresh ginger", amount: 1, unit: "tbsp" },
+    { id: "h10", name: "toasted sesame oil", amount: 2, unit: "tsp" },
+    { id: "h11", name: "fresh ramen noodles", amount: 4, unit: "portions" },
+    { id: "h12", name: "eggs", amount: 4 },
+    { id: "h13", name: "green onions", amount: 5 },
+    { id: "h14", name: "nori sheets", amount: 4 },
+    { id: "h15", name: "kosher salt", amount: 1, unit: "tsp" }
+  ],
+  steps: [
+    { id: "s1", title: "Steep the kombu cold", timer_seconds: 1800,
+      content: "Put {h3} and {h4} in {h2} and let them sit off the heat 30 minutes. Cold steeping pulls the glutamates out cleanly — boiling kombu turns the broth slimy and faintly bitter, which is the single most common ramen mistake at home." },
+    { id: "s2", title: "Poach the chicken", timer_seconds: 1500,
+      content: "Bring the broth to 180°F — steaming, never bubbling — and add {h1} with {h8} smashed and {h9} sliced. Hold it there 20–25 minutes until the chicken reads 165°F. A boil here toughens the thighs and clouds the broth." },
+    { id: "s3", title: "Pull the chicken and the kombu",
+      content: "Remove the chicken to rest, and fish out {h3} and {h4}. Slice the shiitakes thin and put them back in; discard the kombu." },
+    { id: "s4", title: "Build the tare",
+      content: "Whisk {h5}, {h6}, and {h7} together and stir into the broth with {h15}. Taste it now — it should read a touch too salty on its own, because the noodles are unsalted and will pull it back down in the bowl." },
+    { id: "s5", title: "Soft-boil the eggs", timer_seconds: 420,
+      content: "Lower {h12} into already-boiling water, 7 minutes exactly, then straight into ice water. Peel when cool and halve just before serving." },
+    { id: "s6", title: "Noodles in their own water", timer_seconds: 180,
+      content: "Cook {h11} in a separate pot, a touch under package time. Never in the broth — the starch clouds it and they keep softening in the bowl while you eat." },
+    { id: "s7", title: "Slice and assemble",
+      content: "Slice the chicken against the grain. Noodles in the bowl, broth ladled over, chicken fanned on top, eggs halved, {h13} sliced thin, {h14} tucked against the side, and a few drops of {h10}." }
+  ],
+  notes_seed: "The mild one on purpose. Carbs, sodium, warmth and fluid the night before a long run, with no chile to gamble on. Runs around 2,000mg sodium a bowl, which works in your favor when you're salt loading the night before. The gochujang ramen is the version for a normal night."
+},
+{
+  id: "lemon-garlic-shrimp-pasta",
+  title: "Lemon-Garlic Shrimp Pasta",
+  subtitle: "Twenty-five minutes, no cream, all acid",
+  protein: "Shrimp", audience: "Kids too", meal: "Dinner",
+  surfaces: ["Stovetop", "Cast iron"],
+  base_servings: 4, active_min: 25, total_min: 25,
+  macros: { cal: 760, p: 52, c: 88, f: 22, fi: 4 },
+  temps: [
+    { label: "Sear", value: "High, 90 sec/side" },
+    { label: "Sauce", value: "Off heat" }
+  ],
+  ingredients: [
+    { id: "w1", name: "linguine", amount: 1, unit: "lb" },
+    { id: "w2", name: "Gulf shrimp, peeled and deveined", amount: 1.5, unit: "lb" },
+    { id: "w3", name: "kosher salt", amount: 1.5, unit: "tsp" },
+    { id: "w4", name: "olive oil", amount: 2, unit: "tbsp" },
+    { id: "w5", name: "garlic cloves", amount: 8 },
+    { id: "w6", name: "crushed red pepper flakes", amount: 0.5, unit: "tsp" },
+    { id: "w7", name: "dry white wine", amount: 0.75, unit: "cup" },
+    { id: "w8", name: "lemons", amount: 2 },
+    { id: "w9", name: "unsalted butter", amount: 3, unit: "tbsp" },
+    { id: "w10", name: "flat-leaf parsley", amount: 0.5, unit: "cup" },
+    { id: "w11", name: "Parmigiano Reggiano", amount: 0.5, unit: "cup" }
+  ],
+  steps: [
+    { id: "s1", title: "Water on first", timer_seconds: 600,
+      content: "Get the pot going for {w1}. Everything else here takes eight minutes, so the water is the long pole — start it before you touch anything else." },
+    { id: "s2", title: "Dry and salt the shrimp", timer_seconds: 300,
+      content: "Pat {w2} bone dry and season with half of {w3}. Wet shrimp steam instead of searing, and in a sauce this light there's nowhere for a gray, watery shrimp to hide." },
+    { id: "s3", title: "Sear and pull", timer_seconds: 150,
+      content: "Heat {w4} in a wide skillet until it shimmers. Shrimp in a single layer, 90 seconds, flip, 45 more, then straight out to a plate while still slightly under. They finish in the sauce at the end." },
+    { id: "s4", title: "Garlic low and slow", timer_seconds: 180,
+      content: "Drop the heat to medium-low and add {w5} sliced thin with {w6}. Three minutes until soft, pale gold, and sweet. Eight cloves sounds like a lot, but sliced and cooked gently they go mellow — this is the backbone of the dish, so don't let them brown or they turn sharp." },
+    { id: "s5", title: "Deglaze", timer_seconds: 240,
+      content: "Add {w7} and simmer 4 minutes until reduced by half and the alcohol smell is gone. Add the zest of both {w8}, holding the juice back." },
+    { id: "s6", title: "Pasta in, water saved", timer_seconds: 480,
+      content: "Cook {w1} one minute under the box time. Save two full mugs of pasta water before draining — with no cream in this sauce, that starchy water is the only thing making it cling." },
+    { id: "s7", title: "Emulsify off heat", timer_seconds: 120,
+      content: "Pull the pan off the burner, add {w9}, and swirl until it melts into the wine without breaking. Then the pasta and a big splash of water, tossing hard for a full minute until it goes from watery to glossy." },
+    { id: "s8", title: "Shrimp back, acid last",
+      content: "Return the shrimp with the juice of both {w8}, {w10} chopped, and {w11}. Toss to warm through only. Lemon juice goes in off the heat — cooked down it turns dull and slightly bitter, and the whole point of this dish is the brightness." }
+  ],
+  notes_seed: "The Friday-night version: 88g carbs, on the table in 25 minutes, before a Saturday long run. No cream, so it eats much lighter than the Cajun shrimp pasta despite similar carbs. Protein+ pasta works here if you'd rather trade some carbs for protein."
+},
+{
+  id: "recovery-fried-rice",
+  title: "Post-Run Breakfast Fried Rice",
+  subtitle: "Day-old rice, eggs, sausage — twelve minutes",
+  protein: "Eggs", audience: "Kids too", meal: "Breakfast",
+  surfaces: ["Blackstone", "Wok"],
+  base_servings: 2, active_min: 12, total_min: 12,
+  macros: { cal: 710, p: 40, c: 76, f: 24, fi: 3 },
+  temps: [
+    { label: "Pan", value: "As hot as it goes" },
+    { label: "Rice", value: "Cold, day-old" }
+  ],
+  ingredients: [
+    { id: "f1", name: "day-old cooked rice", amount: 3, unit: "cup" },
+    { id: "f2", name: "chicken breakfast sausage", amount: 6, unit: "oz" },
+    { id: "f3", name: "eggs", amount: 6 },
+    { id: "f4", name: "neutral oil", amount: 1, unit: "tbsp" },
+    { id: "f5", name: "toasted sesame oil", amount: 2, unit: "tsp" },
+    { id: "f6", name: "low-sodium soy sauce", amount: 2, unit: "tbsp" },
+    { id: "f7", name: "garlic cloves", amount: 3 },
+    { id: "f8", name: "frozen peas and carrots", amount: 0.75, unit: "cup" },
+    { id: "f9", name: "green onions", amount: 4 },
+    { id: "f10", name: "furikake", amount: 2, unit: "tsp" },
+    { id: "f11", name: "kosher salt", amount: 0.5, unit: "tsp" }
+  ],
+  steps: [
+    { id: "s1", title: "Cold rice only",
+      content: "Break {f1} up with your hands so there are no clumps. It has to be cold and dried out from the fridge — fresh rice is too wet and turns to porridge in a hot pan. Cook an extra batch with whatever you ate the night before and this is already half done when you walk in the door." },
+    { id: "s2", title: "Brown the sausage", timer_seconds: 240,
+      content: "Hot pan with {f4}. Break up {f2} and brown it 4 minutes. Push it to one side." },
+    { id: "s3", title: "Scramble the eggs soft", timer_seconds: 90,
+      content: "Beat {f3} and pour them into the empty side. Push them around 60–90 seconds and pull them while still glossy and underdone — they go back into a screaming hot pan later and will finish there." },
+    { id: "s4", title: "Fry the rice hard", timer_seconds: 180,
+      content: "Everything out of the pan. Crank the heat, add the rice, and press it flat. Leave it 60 seconds before stirring, then toss and press again. You want some grains crisping, not uniformly steamed — that's the texture difference between fried rice and reheated rice." },
+    { id: "s5", title: "Aromatics and peas", timer_seconds: 90,
+      content: "Add {f7} minced and {f8} straight from frozen, 90 seconds. The peas thaw and heat in seconds; adding them earlier just turns them olive green." },
+    { id: "s6", title: "Everything back",
+      content: "Sausage and eggs back in, breaking the eggs into pieces. Pour {f6} down the side of the pan so it hits hot metal and caramelizes rather than just wetting the rice. {f11} and {f5} off the heat." },
+    { id: "s7", title: "Finish",
+      content: "{f9} sliced and {f10} over the top. Eat it hot." }
+  ],
+  notes_seed: "Built for the 30–60 minutes after a long run: 40g protein, 76g carbs, and genuinely salty. Since you're already taking in 60g carbs an hour on the run, the job of this meal is repair more than refueling — hence the protein-forward build rather than a pure carb bomb. Scale to 3 or 4 after an 18-miler."
+}
+
+,
+{
+  id: "chicken-shrimp-jambalaya",
+  title: "Chicken & Shrimp Jambalaya",
+  subtitle: "One pot, trinity, and the rice never gets stirred",
+  protein: "Chicken", audience: "Kids too", meal: "Dinner",
+  surfaces: ["Stovetop"],
+  base_servings: 8, active_min: 35, total_min: 80,
+  macros: { cal: 680, p: 41, c: 76, f: 22, fi: 3 },
+  temps: [
+    { label: "Brown", value: "Medium-high" },
+    { label: "Rice stage", value: "Low, lid on" },
+    { label: "Rest", value: "10 min off heat" }
+  ],
+  ingredients: [
+    { id: "j1", name: "andouille sausage", amount: 12, unit: "oz" },
+    { id: "j2", name: "boneless skinless chicken thighs", amount: 1.5, unit: "lb" },
+    { id: "j3", name: "Gulf shrimp, peeled and deveined", amount: 1, unit: "lb" },
+    { id: "j4", name: "neutral oil", amount: 2, unit: "tbsp" },
+    { id: "j5", name: "yellow onion", amount: 1 },
+    { id: "j6", name: "green bell pepper", amount: 1 },
+    { id: "j7", name: "celery stalks", amount: 3 },
+    { id: "j8", name: "garlic cloves", amount: 5 },
+    { id: "j9", name: "tomato paste", amount: 2, unit: "tbsp" },
+    { id: "j10", name: "canned diced tomatoes", amount: 1.5, unit: "cup" },
+    { id: "j11", name: "long-grain white rice", amount: 3, unit: "cup" },
+    { id: "j12", name: "chicken stock", amount: 4, unit: "cup" },
+    { id: "j13", name: "Cajun seasoning", amount: 2, unit: "tbsp" },
+    { id: "j14", name: "dried thyme", amount: 1, unit: "tsp" },
+    { id: "j15", name: "bay leaves", amount: 2 },
+    { id: "j16", name: "green onions", amount: 5 },
+    { id: "j17", name: "flat-leaf parsley", amount: 4, unit: "tbsp" },
+    { id: "j18", name: "hot sauce", amount: 1, unit: "tsp" }
+  ],
+  steps: [
+    { id: "s1", title: "Render the andouille", timer_seconds: 480,
+      content: "Heat {j4} in a wide Dutch oven over medium-high and brown {j1} sliced into coins, 8 minutes, until the edges crisp. Remove it and leave every bit of the fat." },
+    { id: "s2", title: "Brown the chicken hard", timer_seconds: 480,
+      content: "Season {j2} cut into chunks with half of {j13} and brown them in the sausage fat, 8 minutes, without crowding. You're building fond here — the brown layer on the bottom of the pot is most of what separates jambalaya from rice with meat in it. Remove the chicken." },
+    { id: "s3", title: "Trinity in the fond", timer_seconds: 480,
+      content: "Add {j5}, {j6}, and {j7} all diced. Eight minutes, scraping the bottom as they release their water — that liquid is what lifts the fond off the pot. Add {j8} minced for one more minute." },
+    { id: "s4", title: "Bloom the paste", timer_seconds: 120,
+      content: "Push the vegetables aside, drop {j9} into the bare center, and leave it two minutes until it darkens to brick." },
+    { id: "s5", title: "Liquid and rice in",
+      content: "Add {j10}, {j12}, the rest of {j13}, {j14}, {j15}, and the browned chicken and sausage. Bring to a boil, then stir in {j11} and level it once." },
+    { id: "s6", title: "Lid on, hands off", timer_seconds: 1500,
+      content: "Cover, drop to the lowest heat, and set 25 minutes. Do not stir, do not lift the lid, do not peek. Stirring rice once it's absorbing is what turns jambalaya into a gummy mass, and this is the only rule of the dish that really matters." },
+    { id: "s7", title: "Shrimp on top", timer_seconds: 420,
+      content: "Scatter {j3} over the surface, put the lid straight back on, and give it 7 minutes off the heat. The residual steam cooks them through — shrimp stirred in earlier would be rubber by now." },
+    { id: "s8", title: "Rest, then fluff", timer_seconds: 600,
+      content: "Ten more minutes with the lid on. Then pull {j15}, fold everything together gently with a fork, and finish with {j16}, {j17}, and {j18}." }
+  ],
+  notes_seed: "76g carbs a serving and it feeds eight, so it's a night-before-a-long-run dinner that also leaves lunches. Red Creole style here; if you want it browner and deeper, skip the tomatoes and lean harder on the fond. Reheats well with a splash of stock."
+},
+{
+  id: "hainanese-chicken-rice",
+  title: "Hainanese Chicken Rice",
+  subtitle: "Poached chicken, rice cooked in the broth, ginger-scallion oil",
+  protein: "Chicken", audience: "Kids too", meal: "Dinner",
+  surfaces: ["Stovetop"],
+  base_servings: 4, active_min: 35, total_min: 80,
+  macros: { cal: 750, p: 40, c: 82, f: 24, fi: 2 },
+  temps: [
+    { label: "Poach", value: "175–180°F, never boils" },
+    { label: "Chicken", value: "165°F" },
+    { label: "Ice bath", value: "Immediately after" }
+  ],
+  ingredients: [
+    { id: "n1", name: "bone-in skin-on chicken thighs", amount: 2.5, unit: "lb" },
+    { id: "n2", name: "kosher salt", amount: 1, unit: "tbsp" },
+    { id: "n3", name: "fresh ginger", amount: 4, unit: "inches" },
+    { id: "n4", name: "garlic cloves", amount: 8 },
+    { id: "n5", name: "green onions", amount: 6 },
+    { id: "n6", name: "jasmine rice", amount: 2, unit: "cup" },
+    { id: "n7", name: "neutral oil", amount: 5, unit: "tbsp" },
+    { id: "n8", name: "toasted sesame oil", amount: 1, unit: "tsp" },
+    { id: "n9", name: "low-sodium soy sauce", amount: 3, unit: "tbsp" },
+    { id: "n10", name: "English cucumber", amount: 1 },
+    { id: "n11", name: "cilantro", amount: 0.5, unit: "cup" }
+  ],
+  steps: [
+    { id: "s1", title: "Salt and rest the chicken", timer_seconds: 1800,
+      content: "Rub {n1} all over with {n2} and let it sit 30 minutes. Seasoning has to happen now, because once it goes into the poaching water you can't season the meat itself again." },
+    { id: "s2", title: "Poach, never boil", timer_seconds: 2100,
+      content: "Cover the chicken with cold water in a pot just big enough. Add half of {n3} sliced, 4 of {n4} smashed, and 3 of {n5}. Bring it to 175–180°F — steaming with a bubble every few seconds — and hold it there 30–35 minutes to 165°F. A rolling boil here is the difference between silky and stringy, and it's the whole technique." },
+    { id: "s3", title: "Ice bath immediately", timer_seconds: 600,
+      content: "Chicken straight from the pot into ice water for 10 minutes. This stops the cooking and tightens the skin into the slightly gelatinous texture that defines the dish. Skipping it gives you plain poached chicken." },
+    { id: "s4", title: "Skim the fat and save the broth",
+      content: "Let the poaching liquid settle and spoon the clear fat off the top into a small bowl. Keep both — the fat cooks the rice, the broth becomes the liquid." },
+    { id: "s5", title: "Toast the rice in chicken fat", timer_seconds: 240,
+      content: "Rinse {n6} until the water runs clear, then toast it 3–4 minutes in 2 tbsp of the reserved chicken fat with the rest of {n4} minced and a little {n3} grated, until the grains turn translucent at the edges. This step is where all the flavor lives — rice cooked in plain water next to poached chicken is a completely different, much worse dish." },
+    { id: "s6", title: "Cook in the broth", timer_seconds: 1080,
+      content: "Add poaching broth at 1 : 1.3 rice to liquid, bring to a simmer, cover, drop to low for 15 minutes, then rest lid-on 5 minutes." },
+    { id: "s7", title: "Ginger-scallion oil", timer_seconds: 180,
+      content: "Grate the rest of {n3} and finely slice the remaining {n5} into a heatproof bowl with a pinch of salt. Heat {n7} until it just shimmers and pour it over — it should sizzle hard. Stir in {n8}. The hot oil cooking the aromatics on contact is the point; stirring them into cold oil tastes raw and harsh." },
+    { id: "s8", title: "Serve",
+      content: "Slice the chicken off the bone. Rice, chicken over, {n10} sliced alongside, {n11} scattered. Ginger-scallion oil and {n9} in small dishes to spoon over, plus a cup of the remaining broth on the side." }
+  ],
+  notes_seed: "The most digestible thing in the app: 82g carbs, almost no fiber, nothing fried, nothing spicy. If there's one meal to eat the night before an 18-miler, it's this one. Go lighter on the ginger-scallion oil if you want the fat number down — it's most of the 24g."
 }
 ];
 
@@ -5898,6 +6195,64 @@ const DRINKS = {
       ["Iced tea, unsweet", "Tannin does the job the wine would."],
     ],
   },
+  "ragu-bolognese": {
+    alcohol: [
+      ["Sangiovese or Chianti", "Acid cuts the milk-braised richness without fighting the meat."],
+      ["Barbera", "Softer tannin, same bright acid, usually cheaper."],
+    ],
+    zero: [
+      ["San Pellegrino, lemon", "Bubbles lift three hours of rendered fat off the palate."],
+      ["Unsweet tea", "Tannin against a heavy, fine-textured sauce."],
+    ],
+  },
+  "shoyu-chicken-ramen": {
+    alcohol: [
+      ["Japanese lager", "Crisp and dry — built to sit beside a salty broth."],
+      ["Dry Riesling", "Acid cuts the soy without adding sweetness."],
+    ],
+    zero: [
+      ["Barley tea", "Toasty and unsweetened, the standard partner to a savory bowl."],
+      ["Sparkling water", "Clean, and it keeps the broth tasting of broth."],
+    ],
+  },
+  "lemon-garlic-shrimp-pasta": {
+    alcohol: [
+      ["Pinot Grigio", "Lean and citrusy — exactly what the lemon and garlic want."],
+      ["Albarino", "Saline Spanish white, made for shellfish."],
+    ],
+    zero: [
+      ["Sparkling water, lemon", "Doubles the acid already doing the work."],
+      ["Iced green tea", "Light enough not to bury a delicate sauce."],
+    ],
+  },
+  "recovery-fried-rice": {
+    alcohol: [],
+    zero: [
+      ["Cold Fairlife milk", "Another 13g of protein at the moment it matters most."],
+      ["Iced coffee", "Bitter and cold against a salty, savory plate."],
+      ["Barley tea", "Unsweetened, and it goes down easy when you're still hot."],
+    ],
+  },
+  "chicken-shrimp-jambalaya": {
+    alcohol: [
+      ["Amber lager", "Malt meets the browned fond; carbonation lifts the sausage fat."],
+      ["Dry rose", "Enough body for andouille, enough acid to stay refreshing."],
+    ],
+    zero: [
+      ["Sweet tea", "The Louisiana default, and the sugar softens the cayenne."],
+      ["Ginger beer", "Dry and sharp if you'd rather skip the sugar."],
+    ],
+  },
+  "hainanese-chicken-rice": {
+    alcohol: [
+      ["Dry Riesling", "Citrus and acid against ginger and chicken fat."],
+      ["Japanese lager", "Clean and light; stays out of a subtle dish's way."],
+    ],
+    zero: [
+      ["Barley tea", "Toasty and unsweetened — exactly right beside the broth."],
+      ["Sparkling water, lime", "Cuts the ginger-scallion oil without competing."],
+    ],
+  },
   "sunday-gravy-meatballs": {
     alcohol: [["Chianti Classico", "High-acid Sangiovese is built for tomato — the acid in the wine meets the acid in the sauce."], ["Montepulciano d'Abruzzo", "Same job, softer and usually under fifteen dollars."]],
     zero: [["San Pellegrino, lemon", "Minerality and bubbles cut through four hours of rendered fat."], ["Italian-style bitter soda", "The bitterness plays the role tannin would."]]
@@ -6158,9 +6513,9 @@ function beep() {
 
 /* ---- shopping list: aisle routing + aggregation ---- */
 
-const AISLES = [["Bakery", ["bun", "bread", "tortilla", "english muffin", "bagel", "graham cracker",
+const AISLES = [["Frozen", ["frozen"]], ["Bakery", ["bun", "bread", "tortilla", "english muffin", "bagel", "graham cracker",
     "hoagie", "sub roll", "pizza dough"]], ["Produce", ["onion", "shallot", "garlic clove", "cilantro", "parsley", "basil", "mint", "dill", "rosemary", "thyme", "lime", "lemon", "cucumber", "jalapeño", "chile", "pineapple", "green bean", "scallion", "green onion", "ginger", "lemongrass", "corn on the cob", "cherry tomato", "roma tomato", "avocado", "lettuce", "carrot", "celery", "okra",
-    "broccoli", "cauliflower", "collard", "strawberr", "blueberr", "banana", "poblano", "bell pepper", "serrano", "habanero", "tomatillo", "cabbage", "slaw", "radish", "orange", "potato", "celery", "okra", "strawberr", "blueberr", "raspberr", "banana"]], ["Meat", ["chicken", "beef", "pork", "steak", "ribeye", "filet", "lamb", "thigh", "drumstick", "bacon", "sausage", "andouille", "ham", "turkey wing", "meatball", "pepperoni", "andouille", "ham"]], ["Seafood", ["shrimp", "snapper", "salmon", "grouper", "mahi", "scallop", "fish fillet", "cod"]], ["Dairy & eggs", ["butter", "milk", "cheese", "parmesan", "parmigiano", "feta", "yogurt", "egg", "cream", "cotija", "mayonnaise", "queso", "crema", "cottage cheese", "greek yogurt", "cheddar", "mozzarella", "provolone", "buttermilk"]], ["Frozen", ["frozen"]]];
+    "broccoli", "cauliflower", "collard", "strawberr", "blueberr", "banana", "poblano", "bell pepper", "serrano", "habanero", "tomatillo", "cabbage", "slaw", "radish", "orange", "potato", "celery", "okra", "strawberr", "blueberr", "raspberr", "banana"]], ["Meat", ["chicken", "beef", "pork", "steak", "ribeye", "filet", "lamb", "thigh", "drumstick", "bacon", "sausage", "andouille", "ham", "turkey wing", "meatball", "pepperoni", "pancetta", "andouille", "ham"]], ["Seafood", ["shrimp", "snapper", "salmon", "grouper", "mahi", "scallop", "fish fillet", "cod"]], ["Dairy & eggs", ["butter", "milk", "cheese", "parmesan", "parmigiano", "feta", "yogurt", "egg", "cream", "cotija", "mayonnaise", "queso", "crema", "cottage cheese", "greek yogurt", "cheddar", "mozzarella", "provolone", "buttermilk"]]];
 
 /* Spices and dried goods win outright — "ground cumin" is not meat,
    "garlic powder" is not produce, "chicken bone broth" is not the butcher. */
