@@ -5309,7 +5309,7 @@ const SEED = [{
     { label: "Broil", value: "2 min at the end" }
   ],
   pairs: ["sunday-gravy-meatballs", "sunday-sausage-gravy", "baked-ziti", "chicken-parmesan",
-          "cajun-shrimp-pasta", "ragu-bolognese", "lemon-garlic-shrimp-pasta"],
+          "cajun-shrimp-pasta", "ragu-bolognese", "restaurant-bolognese", "lemon-garlic-shrimp-pasta"],
   ingredients: [
     { id: "d1", name: "French bread loaf", amount: 1 },
     { id: "d2", name: "unsalted butter, softened", amount: 8, unit: "tbsp" },
@@ -5834,6 +5834,68 @@ const SEED = [{
   ],
   notes_seed: "The most digestible thing in the app: 82g carbs, almost no fiber, nothing fried, nothing spicy. If there's one meal to eat the night before an 18-miler, it's this one. Go lighter on the ginger-scallion oil if you want the fat number down — it's most of the 24g."
 }
+
+,
+{
+  id: "restaurant-bolognese",
+  title: "Restaurant-Style Bolognese",
+  subtitle: "Beef and pork sugo, roasted tomato, finished with cream",
+  protein: "Beef & Pork", audience: "Kids too", meal: "Dinner",
+  surfaces: ["Stovetop", "Oven"],
+  base_servings: 6, active_min: 45, total_min: 210,
+  macros: { cal: 920, p: 46, c: 97, f: 36, fi: 5 },
+  temps: [
+    { label: "Roast tomatoes", value: "425°F" },
+    { label: "Simmer", value: "Barest bubble" },
+    { label: "Cream", value: "Off the heat" }
+  ],
+  ingredients: [
+    { id: "r1", name: "28 oz can San Marzano whole peeled tomatoes", amount: 1 },
+    { id: "r2", name: "olive oil", amount: 4, unit: "tbsp" },
+    { id: "r3", name: "ground beef, 85/15", amount: 0.75, unit: "lb" },
+    { id: "r4", name: "ground pork", amount: 0.75, unit: "lb" },
+    { id: "r5", name: "pancetta", amount: 3, unit: "oz" },
+    { id: "r6", name: "yellow onion", amount: 1 },
+    { id: "r7", name: "carrots", amount: 2 },
+    { id: "r8", name: "celery stalks", amount: 2 },
+    { id: "r9", name: "garlic cloves", amount: 5 },
+    { id: "r10", name: "tomato paste", amount: 2, unit: "tbsp" },
+    { id: "r11", name: "dry red wine", amount: 1, unit: "cup" },
+    { id: "r12", name: "Fairlife whole milk", amount: 0.75, unit: "cup" },
+    { id: "r13", name: "beef broth", amount: 1.5, unit: "cup" },
+    { id: "r14", name: "heavy cream", amount: 0.75, unit: "cup" },
+    { id: "r15", name: "kosher salt", amount: 2, unit: "tsp" },
+    { id: "r16", name: "black pepper", amount: 1, unit: "tsp" },
+    { id: "r17", name: "fresh pappardelle", amount: 1.5, unit: "lb" },
+    { id: "r18", name: "Parmigiano Reggiano", amount: 1, unit: "cup" },
+    { id: "r19", name: "fresh basil", amount: 0.5, unit: "cup" }
+  ],
+  steps: [
+    { id: "s1", title: "Roast the tomatoes", timer_seconds: 2100,
+      content: "Drain {r1} and tear them open onto a sheet pan, cut side up. Toss with 2 tbsp of {r2} and a big pinch of salt and roast at 425°F for 30–35 minutes until the edges caramelize and go dark in spots. This step is the entire difference between this and a jar of sauce — roasting concentrates the sugars and gives you the deep red-brown color the restaurant version has. Don't skip it and don't pull them pale." },
+    { id: "s2", title: "Render the pancetta", timer_seconds: 420,
+      content: "While the tomatoes roast, heat the rest of {r2} in a Dutch oven over medium and render {r5} finely chopped, 7 minutes, until the fat is out." },
+    { id: "s3", title: "Soffritto", timer_seconds: 720,
+      content: "Add {r6}, {r7}, and {r8} finely diced, 12 minutes until fully soft. Add {r9} minced for a final minute." },
+    { id: "s4", title: "Brown the meat hard", timer_seconds: 600,
+      content: "Add {r3} and {r4}, press flat, and let it sit undisturbed 3 minutes before breaking it up. Keep going 10 minutes total until there's real browning and fond on the bottom. This is the opposite of the traditional version, which deliberately avoids a hard sear — here you want that roasted depth, because the cream at the end will soften everything and you need something to push back against it." },
+    { id: "s5", title: "Bloom the paste", timer_seconds: 120,
+      content: "Push everything aside, drop {r10} into the bare center, and leave it two minutes until it darkens to brick." },
+    { id: "s6", title: "Red wine", timer_seconds: 480,
+      content: "Pour in {r11} and scrape the bottom clean. Simmer 8 minutes until reduced by two-thirds. Red here rather than white — it's part of what makes this darker and rounder than the traditional version." },
+    { id: "s7", title: "Milk, then the roasted tomatoes", timer_seconds: 720,
+      content: "Add {r12} and simmer 12 minutes until mostly absorbed — it still does the tenderizing work even with cream coming later. Then crush the roasted tomatoes in by hand along with every bit of the caramelized juice from the pan." },
+    { id: "s8", title: "Season and simmer", timer_seconds: 6000,
+      content: "Add {r13}, {r15}, and {r16}. Barest bubble, lid ajar, 100 minutes. Splash of water any time it threatens to dry out. You're looking for fat separating orange at the edges and a color gone deep brick rather than bright red." },
+    { id: "s9", title: "Cream off the heat", timer_seconds: 180,
+      content: "Kill the burner, wait a minute, then stir in {r14}. Off the heat matters — cream added to a simmering acidic sauce can break or go grainy, and you lose the silky quality that's the whole point. Taste for salt now; the cream will have flattened it." },
+    { id: "s10", title: "Fresh pappardelle", timer_seconds: 180,
+      content: "Cook {r17}. Fresh pasta takes about 3 minutes, so start it only when the sauce is done. Save two mugs of pasta water before draining." },
+    { id: "s11", title: "Finish in the pan", timer_seconds: 120,
+      content: "Pasta into the sauce with a splash of water, tossing hard for a minute until glossy. {r18} and {r19} torn over at the table." }
+  ],
+  notes_seed: "The American restaurant version, not the Bologna one — roasted tomato and cream make it red, rich and glossy where the traditional recipe is brown and lean. Better as a post-long-run dinner than a night-before one: 36g fat and 920 calories is a feature after a hard session and a liability before a 5:30 start. Dried pappardelle works, just cook it to the box minus one instead of three minutes."
+}
 ];
 
 /* ============================== BEVERAGES ==============================
@@ -6195,6 +6257,16 @@ const DRINKS = {
       ["Iced tea, unsweet", "Tannin does the job the wine would."],
     ],
   },
+  "restaurant-bolognese": {
+    alcohol: [
+      ["Sangiovese", "The cream and roasted tomato both want acid pushing back."],
+      ["Montepulciano d'Abruzzo", "Rounder and softer — matches a richer, creamier sauce."],
+    ],
+    zero: [
+      ["San Pellegrino, lemon", "Bubbles cut cream better than anything else on the table."],
+      ["Unsweet tea", "Tannin against the fat, no sugar against the roasted tomato."],
+    ],
+  },
   "ragu-bolognese": {
     alcohol: [
       ["Sangiovese or Chianti", "Acid cuts the milk-braised richness without fighting the meat."],
@@ -6515,7 +6587,7 @@ function beep() {
 
 const AISLES = [["Frozen", ["frozen"]], ["Bakery", ["bun", "bread", "tortilla", "english muffin", "bagel", "graham cracker",
     "hoagie", "sub roll", "pizza dough"]], ["Produce", ["onion", "shallot", "garlic clove", "cilantro", "parsley", "basil", "mint", "dill", "rosemary", "thyme", "lime", "lemon", "cucumber", "jalapeño", "chile", "pineapple", "green bean", "scallion", "green onion", "ginger", "lemongrass", "corn on the cob", "cherry tomato", "roma tomato", "avocado", "lettuce", "carrot", "celery", "okra",
-    "broccoli", "cauliflower", "collard", "strawberr", "blueberr", "banana", "poblano", "bell pepper", "serrano", "habanero", "tomatillo", "cabbage", "slaw", "radish", "orange", "potato", "celery", "okra", "strawberr", "blueberr", "raspberr", "banana"]], ["Meat", ["chicken", "beef", "pork", "steak", "ribeye", "filet", "lamb", "thigh", "drumstick", "bacon", "sausage", "andouille", "ham", "turkey wing", "meatball", "pepperoni", "pancetta", "andouille", "ham"]], ["Seafood", ["shrimp", "snapper", "salmon", "grouper", "mahi", "scallop", "fish fillet", "cod"]], ["Dairy & eggs", ["butter", "milk", "cheese", "parmesan", "parmigiano", "feta", "yogurt", "egg", "cream", "cotija", "mayonnaise", "queso", "crema", "cottage cheese", "greek yogurt", "cheddar", "mozzarella", "provolone", "buttermilk"]]];
+    "broccoli", "cauliflower", "collard", "strawberr", "blueberr", "banana", "poblano", "bell pepper", "serrano", "habanero", "tomatillo", "cabbage", "slaw", "radish", "orange", "potato", "celery", "okra", "strawberr", "blueberr", "raspberr", "banana"]], ["Meat", ["chicken", "beef", "pork", "steak", "ribeye", "filet", "lamb", "thigh", "drumstick", "bacon", "sausage", "andouille", "ham", "turkey wing", "meatball", "pepperoni", "pancetta", "andouille", "ham"]], ["Seafood", ["shrimp", "snapper", "salmon", "grouper", "mahi", "scallop", "fish fillet", "cod"]], ["Dairy & eggs", ["butter", "milk", "cheese", "parmesan", "parmigiano", "feta", "yogurt", "egg", "cream", "cotija", "mayonnaise", "queso", "crema", "cottage cheese", "greek yogurt", "cheddar", "mozzarella", "provolone", "buttermilk", "heavy cream"]]];
 
 /* Spices and dried goods win outright — "ground cumin" is not meat,
    "garlic powder" is not produce, "chicken bone broth" is not the butcher. */
