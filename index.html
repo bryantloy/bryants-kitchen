@@ -5896,6 +5896,39 @@ const SEED = [{
   ],
   notes_seed: "The American restaurant version, not the Bologna one — roasted tomato and cream make it red, rich and glossy where the traditional recipe is brown and lean. Better as a post-long-run dinner than a night-before one: 36g fat and 920 calories is a feature after a hard session and a liability before a 5:30 start. Dried pappardelle works, just cook it to the box minus one instead of three minutes."
 }
+,
+{
+  id: "protein-gummy-bears",
+  title: "Protein Gummy Bears",
+  subtitle: "Three flavors from one pot, 105 bears a batch",
+  protein: "Gelatin", audience: "Kids too", meal: "Dessert",
+  surfaces: ["Stovetop"],
+  base_servings: 3, active_min: 20, total_min: 80,
+  macros: { cal: 65, p: 15, c: 1, f: 0, fi: 0 },
+  temps: [
+    { label: "Boil", value: "Medium heat" },
+    { label: "Chill", value: "1 hour+" }
+  ],
+  ingredients: [
+    { id: "g1", name: "water", amount: 2, unit: "cup" },
+    { id: "g2", name: "unflavored gelatin", amount: 42, unit: "g" },
+    { id: "g3", name: "sugar-free drink mix packets (Nerds, Skittles or Jolly Rancher)", amount: 3 },
+    { id: "g4", name: "unflavored whey protein powder", amount: 10, unit: "g" }
+  ],
+  steps: [
+    { id: "s1", title: "Boil the water", timer_seconds: 480,
+      content: "Bring {g1} to a boil in a pot over medium heat." },
+    { id: "s2", title: "Split it three ways",
+      content: "Divide the boiling water evenly among three heatproof containers, about 2/3 cup each. Each container becomes one flavor, and each one is a serving." },
+    { id: "s3", title: "Gelatin, whey and flavor",
+      content: "Split {g2} and {g4} evenly across the containers, about 14g of gelatin and 3g of whey each, then add one of the {g3} to each container. Mix until nothing is grainy; a milk frother gets there fastest. The original recipe lists the whey but never says when it goes in, so it goes in here with the gelatin." },
+    { id: "s4", title: "Fill the molds",
+      content: "Use a dropper or spoon to fill the gummy bear molds. Work while the liquid is warm, because it thickens as it cools." },
+    { id: "s5", title: "Chill until set", timer_seconds: 3600,
+      content: "Refrigerate at least 1 hour, until firm. Pop them out of the molds once set." }
+  ],
+  notes_seed: "Recipe via nickkaz.fit. A serving is 35 bears, one container of one flavor. Go by grams on the gelatin: 42g is six standard 7g envelopes, and the post's \"about 1 cup\" doesn't match that weight. Macros here include the whey; the post's 142 cal and 36g protein for the whole batch only add up for the gelatin, so it reads like the whey was left out."
+}
 ];
 
 /* ============================== BEVERAGES ==============================
